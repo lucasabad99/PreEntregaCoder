@@ -1,0 +1,73 @@
+header{
+background-color: rgb(21, 21, 124);
+color: rgb(255, 255, 255);
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+ul{
+list-style: none;
+display: flex;
+flex-direction: row;
+}
+
+li{
+    margin: 0 20px ;
+}
+
+h1{
+    margin-left: 15px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    background-color: rgb(21, 21, 124);;
+}
+
+nav a {
+    color: white; /* Cambia el color del texto a negro */
+    text-decoration: none; /* Remueve el subrayado */
+}
+
+.banner{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: stretch;
+}
+
+.banner img {
+    width: 700px;  /* Asegúrate de que ambas imágenes tengan el mismo ancho */
+    height: 700px; /* Asegúrate de que ambas imágenes tengan la misma altura */
+    object-fit: cover; /* Asegura que la imagen llene el cuadrado y se recorte si es necesario */
+    margin: 20px; /* Ajusta el espacio entre las imágenes si es necesario */
+    border-radius: 20px;
+}
+
+footer{
+display: flex;
+justify-content: space-around;
+margin-top: 20px; /* Añade espacio entre el footer y el contenido superior */
+position: fixed;
+}
+
+.foot{
+
+display: flex; 
+justify-content: space-around;
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+p{
+
+display: flex;
+justify-content: center;
+
+}
