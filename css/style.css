@@ -46,23 +46,33 @@ align-items: stretch;
     border-radius: 20px;
 }
 
-footer{
-display: flex;
+/* footer{
+display: flex;  
 justify-content: space-around;
-margin-top: 20px; /* Añade espacio entre el footer y el contenido superior */
+margin-top: 20px;
 position: fixed;
-}
+} */
 
-.foot{
+.footer-global{
 
-display: flex; 
-justify-content: space-around;
-
+    position: absolute; 
+    bottom: 0;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    left: 0;
+    font-size: 16px; /* Tamaño de letra */
+    font-family: Arial, sans-serif; /* Familia de fuentes */
+    font-weight: bold; /* Peso de la fuente */
+    color: #333; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    clear: both;
+    min-height: 0vh;
 }
 
 main{
     display: flex;
     justify-content: center;
+    
 }
 
 p{
