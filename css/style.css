@@ -69,15 +69,132 @@ position: fixed;
     min-height: 0vh;
 }
 
+/* NUESTRA HISTORIA */
+
+.footer-especifico {
+ 
+    position: relative;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    margin: 0; /* Asegura que no haya margen */
+    left: 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    clear: both;
+    min-height: 10vh;
+    width: 100%;
+    box-sizing: border-box;
+    display: block; /* O asegúrate de que el display no esté alterando la alineación */
+    text-align: left;
+}
+
 main{
+
     display: flex;
     justify-content: center;
-    
+
 }
+
+.main-historia{
+
+    display: flex;
+    justify-content: center; /* Centra el párrafo horizontalmente */
+    align-items: center; /* Centra el párrafo verticalmente */
+    min-height: 100vh; /* Hace que el main ocupe toda la altura de la página */
+
+}
+
+.p-centrado{
+
+    display: flex;
+    max-width: 500px; /* Ajusta el ancho máximo del párrafo */
+    width: 100%; /* Asegura que el párrafo ocupe todo el ancho disponible dentro del max-width */
+    text-align: justify; /* Centra el texto dentro del párrafo */
+    border: 2px solid #78787ab7; /* Agrega un borde alrededor del párrafo */
+    border-radius: 8px; /* Opcional: añade bordes redondeados */
+    background-color: #f0f0f0; /* Opcional: añade un color de fondo */
+    margin:  -200px 0 0 0; /* Margen superior negativo para moverlo hacia arriba */
+    padding: 3%;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
+}
+
 
 p{
 
 display: flex;
 justify-content: center;
 
+}
+
+/* CONTACTOS */
+
+.contactos-main {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre el mapa y la lista de empleados */
+    padding: 20px; /* Añade un padding alrededor del contenido */
+}
+
+.jefes{
+
+    font-family: 'Roboto', sans-serif; /* Elige una fuente que te guste */
+    font-size: 18px; /* Ajusta el tamaño de la fuente */
+    line-height: 1.6; /* Controla el espacio entre líneas */
+    color: #333; /* Elige el color del texto */
+    font-weight: bold;
+    
+    
+}
+
+/* TRABAJE CON NOSOTROS */
+
+.main-Trabaje{
+
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 70vh; /* Hace que el main ocupe toda la altura de la ventana */
+    padding: 20px; /* Añade espacio interno si es necesario */
+
+}
+
+/* PRODUCTOS */
+
+
+.main-productos{
+
+    padding: 20px; 
+
+
+}
+
+
+.productos-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en filas */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes en la página */
+}
+
+.img-productos{
+
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en filas */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes en la página */
+}
+
+.img-productos img{
+
+
+    width: calc(25% - 20px); /* Hace que cada imagen ocupe el 25% del contenedor menos el espacio del gap */
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin distorsionarse */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
 }
