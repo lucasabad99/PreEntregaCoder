@@ -5,24 +5,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nuestra historia</title>
         <link rel="shortcut icon" href="./assets/000_334P84K-1024x683.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/style.css">
     </head>
 <body>
     <header>
         <h1>Flex</h1>
-        <nav>
-            <ul class = "Menu"> 
-                    <li><a href="../index.html" target="_blank">Inicio</a></li>
-                    <li><a href="./nuestraHistoria.html" target="_blank">Nuestra historia</a></li>
-                    <li><a href="./contacto.html" target="">Contacto</a></li>
-                    <li><a href="./productos.html" target="_blank">Productos</a></li>
-                    <li><a href="./trabajeconNosotros.html" target="_blank">Trabaje con nosotros</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">BocaFunk</a> <!-- Puedes cambiar el texto "Mi Sitio Web" por el nombre de tu sitio -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="../index.html" target="_blank">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./nuestraHistoria.html" target="_blank">Nuestra historia</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./productos.html" target="_blank">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./trabajeconNosotros.html" target="_blank">Trabaje con nosotros</a>
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Buscar</button> <!-- Cambié "Search" a "Buscar" para mantener el idioma consistente -->
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
     </header>
 
     <main class="main-historia">
-            <p class="p-centrado"> 
+            <p class="p-centrado mt-5"> 
                 Bienvenidos a BocaFunk del Caminito
                 En el corazón vibrante del histórico barrio de La Boca, donde los colores y la pasión por el fútbol cobran vida, te invitamos a descubrir BocaFunk del Caminito. Somos un destino imperdible para todos los hinchas de Boca Juniors y coleccionistas de Funkos que buscan capturar la esencia de su equipo y personajes favoritos. Desde camisetas oficiales hasta ediciones limitadas de Funkos, nuestro local es un paraíso para los amantes de la cultura xeneize y la cultura pop.
 
@@ -37,5 +66,6 @@
     <footer class="footer-global">
         <p>© 2024 Negocio de Anto. Todos los derechos reservados</p>
     </footer>    
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

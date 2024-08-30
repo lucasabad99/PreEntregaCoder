@@ -4,55 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabaje con nosotros</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css"> <!-- Asegúrate de la ruta correcta -->
 </head>
 <body>
     <header>
-        <h1>Flex</h1>
-        <nav>
-                <ul class = "Menu"> 
-                        <li><a href="../index.html" target="_blank">Inicio</a></li>
-                        <li><a href="./nuestraHistoria.html" target="_blank">Nuestra historia</a></li>
-                        <li><a href="./contacto.html" target="">Contacto</a></li>
-                        <li><a href="./productos.html" target="_blank">Productos</a></li>
-                        <li><a href="./trabajeconNosotros.html" target="_blank">Trabaje con nosotros</a></li>
-                </ul>
-        </nav>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">BocaFunk</a> <!-- Puedes cambiar el texto "Mi Sitio Web" por el nombre de tu sitio -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="../index.html" target="_blank">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./nuestraHistoria.html" target="_blank">Nuestra historia</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./productos.html" target="_blank">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./trabajeconNosotros.html" target="_blank">Trabaje con nosotros</a>
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Buscar</button> <!-- Cambié "Search" a "Buscar" para mantener el idioma consistente -->
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
       
     </header>
     
     <main class="main-Trabaje">
-            <section>
-                <h2>Trabaje con nosotros</h2>
-                    <form 
-                        action="#" method="" enctype="text/plain" > 
-                        <fieldset>
-                            <label for="Nombre">Nombre</label>
-                            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" >
-                        </fieldset>
-                        <fieldset>
-                            <label for="Apellido">Apellido</label>
-                            <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" >
-                        </fieldset>
-                        <fieldset>
-                            <label for="gmail">Dejanos tu email</label>
-                            <input type="email" name="Mail" id="gmail"  placeholder="email">
-                        </fieldset>
-                        <fieldset>
-                            <label for="Telefono">Telefono</label>
-                            <input type="Telefono" name="Telefono" id="Tele" placeholder="Telefono">
-                        </fieldset>
-                        <label for="mensaje">Dejanos tu mensaje</label>
-                        <textarea name="mensaje" id="mensaje" placeholder="escribinos tu mensaje"></textarea>
-                        
-                        <input type="submit" value="Enviar">
-                        <input type="reset" value="Resetear">            
-                    </form>
-            </section>
+        <section>
+            <h2>Trabaje con nosotros</h2>
+            <form action="#" method="" enctype="text/plain" class="row g-3 container mt-4"> 
+                <div class="col-auto">
+                    <label for="Nombre" class="visually-hidden">Nombre</label>
+                    <input type="text" class="form-control" id="Nombre" placeholder="Nombre" name="Nombre">
+                </div>
+                <div class="col-auto">
+                    <label for="Apellido" class="visually-hidden">Apellido</label>
+                    <input type="text" class="form-control" id="Apellido" placeholder="Apellido" name="Apellido">
+                </div>
+                <div class="col-auto">
+                    <label for="gmail" class="visually-hidden">Email</label>
+                    <input type="email" class="form-control" id="gmail" placeholder="name@example.com" name="Mail">
+                </div>
+                <div class="col-auto">
+                    <label for="Telefono" class="visually-hidden">Teléfono</label>
+                    <input type="text" class="form-control" id="Tele" placeholder="Teléfono" name="Telefono">
+                </div>
+                <div class="col-auto">
+                    <label for="mensaje" class="visually-hidden">Dejanos tu mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribinos tu mensaje" name="mensaje"></textarea>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+                </div>
+                <div class="col-auto">
+                    <button type="reset" class="btn btn-outline-secondary mb-3">Resetear</button>
+                </div>         
+            </form>
+        </section>
     </main>
+    
+    
+    
 
     <footer class="footer-global" >
             <p>© 2024 Negocio de Anto. Todos los derechos reservados</p>
     </footer>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
