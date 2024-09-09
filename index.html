@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="shortcut icon" href="./assets/000_334P84K-1024x683.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>BocaFunk</h1>
-        <nav class="navbar navbar-dark bg-dark fixed-top">
+        <h1>Moda Ambar</h1>
+        <nav class="navbar navbar-dark custom-bg" >
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">BocaFunk</a>
+              <a class="navbar-brand" href="#"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -28,16 +29,16 @@
                       <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./pages/nuestraHistoria.html" target="_blank">Nuestra historia</a>
+                      <a class="nav-link" href="./pages/nuestraHistoria.html">Nuestra historia</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="./pages/contacto.html">Contacto</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./pages/productos.html" target="_blank">Productos</a>
+                      <a class="nav-link" href="./pages/productos.html" >Productos</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./pages/trabajeconNosotros.html" target="_blank">Trabaje con nosotros</a>
+                      <a class="nav-link" href="./pages/trabajeconNosotros.html">Trabaje con nosotros</a>
                     </li>
                   </ul>
                   <form class="d-flex mt-3" role="search">
@@ -51,14 +52,70 @@
     </header>
 
     <main>
-        <section class="banner">
-                    <img src="./assets/BOCA-CAMISETA-2021-7.jpg" alt="">
-                    <img src="./assets/sddefault.jpg" alt="">
-        </section>
+      <section class="banner">
+        
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+      
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="./assets/animes_japoneses_entenda_o_que_sao_e_o_porque_de_fazerem_tanto_sucesso-18726989.jpg" class="d-block w-100" alt="Camiseta Boca Juniors">
+              </div>
+              <div class="carousel-item">
+                  <img src="./assets/manga-o-anime.jpg" class="d-block w-100" alt="Funkopop">
+              </div>
+          </div>
+      
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+      
+    
+        <div class="subtitle-container">
+          <p>Nuestros productos</p>
+        </div>
+
+        <div class="image-gallery"> 
+               <img src="./assets/img_0528-2e3634a610684e304017123479733560-1024-1024.jpeg" alt="" class="gallery-image">
+               <img src="./assets/sddefault.jpg" alt="" class="gallery-image">
+               <img src="./assets/BRZGARHRZFIZ2ETPAQZ7NCD3QE.jpg" alt="" class="gallery-image">
+        </div>
+
+      </section>
     </main>
+    
         
     <footer class="footer-global">
-        <p>© 2024 Negocio de Anto. Todos los derechos reservados</p>
+      <div class="footer-content">
+        <div>
+          <p>2024 Moda Ambar. Todos los derechos reservados.</p>
+        </div>
+        
+        <div class="social-icons">
+               <p>Seguinos en las redes</p>
+            <a href="https://www.facebook.com/tu-pagina" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/tu-perfil" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div>
+          <p>Nuestros horarios</p>
+          <p>La Boca</p>
+          <P> L-D 10:00 AM - 18:00PM</P>
+        </div>
+        <div><p>Trabaja con nosotros</p></div>
+    </div>
     </footer>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>

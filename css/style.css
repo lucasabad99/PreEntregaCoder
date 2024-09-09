@@ -4,7 +4,7 @@ header{
 background-color: rgb(21, 21, 124);
 color: rgb(255, 255, 255);
 display: flex;
-flex-direction: row;
+flex-direction: center;
 justify-content: space-between;
 }
 
@@ -20,12 +20,14 @@ li{
 
 h1{
     margin-left: 15px;
+    display: flex;
+    flex-direction: center;
 }
 
 nav{
     display: flex;
     align-items: center;
-    background-color: rgb(21, 21, 124);;
+    background-color: rgb(21, 21, 124);
 }
 
 nav a {
@@ -33,43 +35,187 @@ nav a {
     text-decoration: none; /* Remueve el subrayado */
 }
 
-.banner{
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: stretch;
+.banner {
+    display: flex;               /* Aplica Flexbox, lo que permite organizar los elementos dentro de `.banner` */
+    flex-direction: column;      /* Cambia la dirección del layout a columnas, colocando los elementos uno debajo del otro */
+    align-items: center;         /* Centra los elementos horizontalmente en el contenedor */
+    margin-bottom: 20px;         /* Añade espacio debajo de la sección de las imágenes para separarlas del subtítulo */
 }
 
-.banner img {
-    width: 700px;  /* Asegúrate de que ambas imágenes tengan el mismo ancho */
-    height: 700px; /* Asegúrate de que ambas imágenes tengan la misma altura */
-    object-fit: cover; /* Asegura que la imagen llene el cuadrado y se recorte si es necesario */
-    margin: 20px; /* Ajusta el espacio entre las imágenes si es necesario */
-    border-radius: 20px;
+.custom-bg{
+    background-color: rgb(21, 21, 124);
 }
 
-/* footer{
-display: flex;  
-justify-content: space-around;
-margin-top: 20px;
-position: fixed;
-} */
+.images-container {
+    display: flex;               /* Flexbox también se usa aquí, pero las imágenes dentro se alinearán en fila por defecto */
+    justify-content: space-around; /* Distribuye las imágenes con espacio alrededor, centrándolas horizontalmente */
+    align-items: stretch;        /* Hace que las imágenes se estiren para llenar todo el alto disponible en el contenedor */
+    margin-bottom: 20px;         /* Añade espacio debajo de las imágenes para separar las imágenes del subtítulo */
+}
 
-.footer-global{
+.images-container img {
+    width: 700px;                /* Establece el ancho fijo de cada imagen */
+    height: 700px;               /* Establece el alto fijo de cada imagen */
+    object-fit: cover;           /* Recorta las imágenes para llenar completamente el área definida por el ancho y alto sin deformarlas */
+    margin: 20px;                /* Añade espacio alrededor de cada imagen */
+    border-radius: 20px;         /* Redondea los bordes de las imágenes para darles un estilo más suave */
+}
 
-    position: absolute; 
-    bottom: 0;
+.subtitle-container {
+    text-align: center;          /* Centra el texto del subtítulo dentro del contenedor */
+    width: 100%;                 /* Hace que el contenedor del subtítulo ocupe todo el ancho disponible */
+    color: white;                 /* Establece el color del texto del subtítulo */
+    background-color:rgb(21, 21, 124); /* Establece el color de fondo del contenedor del subtítulo */
+    padding: 10px;               /* Añade espacio interno (padding) alrededor del texto del subtítulo */
+}
+
+.subtitle-container p {
+    margin: 0;                   /* Elimina el margen predeterminado del párrafo, para que no haya espacio extra alrededor del texto */
+    font-size: 24px;             /* Ajusta el tamaño de la fuente del texto del subtítulo */
+}
+
+html, body {
+    height: 100%; /* Asegura que el body y el html ocupen el 100% de la altura de la pantalla */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que el body ocupe toda la altura de la ventana */
+  }
+  
+ 
+  
+ /* Asegúrate de que el contenedor del carrusel ocupe todo el ancho del viewport */
+.carousel {
+    width: auto; /* Ocupa el 100% del ancho de la ventana */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+    height: 30vh; /* Ajusta la altura a la mitad de la ventana */
+    text-align: center;
+    max-width: 100%; /* Asegura que la imagen no se estire más allá del contenedor */
+    margin: 0 auto; /* Centra horizontalmente la imagen */
+    justify-content: center;
+}
+
+
+/* Asegúrate de que las imágenes del carrusel sean responsivas y ocupen todo el ancho del contenedor */
+.carousel-inner img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+}
+
+  
+  .images-container img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: 50vh; /* La imagen ocupará la mitad de la altura de la pantalla (50% del viewport) */
+    object-fit: cover; /* Recorta la imagen si es necesario sin distorsionar */
+  }
+  
+  .image-gallery {
+    display: flex; /* Usa flexbox para alinear las imágenes en fila */
+    flex-direction: row; /* Alinea los elementos en una fila */
+    gap: 10px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente en el contenedor */
+    padding: 10px; /* Espacio interno alrededor del contenedor */
+  }
+  
+  .gallery-image {
+    width: 300px; /* Ancho fijo para cada imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Cubre el área del contenedor sin distorsionar la imagen */
+    border-radius: 5px; /* Opcional: bordes redondeados para un estilo más atractivo */
+  }
+  
+  
+  
+
+main {
+    flex: 1; /* Hace que el main ocupe todo el espacio disponible entre el header y footer */
+}
+
+.footer-global {
+    position: relative;
     background-color: #f8f8f8;
-    padding: 10px 0;
-    left: 0;
-    font-size: 16px; /* Tamaño de letra */
-    font-family: Arial, sans-serif; /* Familia de fuentes */
-    font-weight: bold; /* Peso de la fuente */
-    color: #333; /* Color del texto */
-    text-align: center; /* Alineación del texto */
-    clear: both;
-    min-height: 0vh;
+    padding: 20px 0; /* Aumentar el padding para más espacio */
+    width: 100%;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    min-height: 100px; /* Aumentar la altura mínima para más espacio */
 }
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Distribuye los elementos equitativamente */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.footer-content div {
+    flex: 1; /* Permite que cada div tome un espacio proporcional */
+    max-width: 200px; /* Limita el ancho máximo de cada div */
+}
+
+.footer-content .social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; /* Espacio entre los iconos sociales */
+}
+
+.footer-content .social-icons i {
+    font-size: 24px; /* Tamaño de los iconos */
+    color: #333; /* Color de los iconos */
+    text-decoration: none;
+}
+
+.footer-content .social-icons a {
+    color: #333; /* Color de los iconos en los enlaces */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.footer-content .social-icons a:hover {
+    color: #007bff; /* Color al pasar el ratón sobre los iconos */
+}
+
+.footer-content p {
+    margin: 0; /* Elimina el margen para evitar espacios innecesarios */
+    padding: 5px 0; /* Espaciado vertical */
+}
+
+.footer-content div:first-of-type p {
+    font-size: 14px; /* Tamaño de fuente para el texto general */
+}
+
+.footer-content div:last-of-type p {
+    font-size: 14px; /* Tamaño de fuente para el texto general */
+}
+
+.footer-content .social-icons p {
+    font-size: 14px; /* Tamaño de fuente para el texto de redes sociales */
+}
+
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px; /* Tamaño de los íconos */
+}
+
+.social-icons a:hover {
+    color: #ddd; /* Color al pasar el ratón */
+}
+
+
 
 /* NUESTRA HISTORIA */
 
