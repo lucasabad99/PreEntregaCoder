@@ -121,7 +121,7 @@ html, body {
 .image-box {
     position: relative;
     width: 300px; /* Fija el ancho de las imágenes */
-    height: 400px; /* Fija la altura para que todas las imágenes tengan el mismo tamaño */
+    height: 400pgity x; /* Fija la altura para que todas las imágenes tengan el mismo tamaño */
     overflow: hidden; /* Oculta cualquier contenido que sobresalga */
 }
 
