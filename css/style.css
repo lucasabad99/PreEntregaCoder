@@ -86,44 +86,73 @@ html, body {
  
   
  /* Asegúrate de que el contenedor del carrusel ocupe todo el ancho del viewport */
+/* Carrusel: Ajuste del contenedor principal */
 .carousel {
-    width: auto; /* Ocupa el 100% del ancho de la ventana */
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
-    height: 30vh; /* Ajusta la altura a la mitad de la ventana */
-    text-align: center;
+    width: 100%; /* Ocupa el 100% del ancho de la ventana */
     max-width: 100%; /* Asegura que la imagen no se estire más allá del contenedor */
-    margin: 0 auto; /* Centra horizontalmente la imagen */
-    justify-content: center;
+    height: 40vh; /* Ajusta la altura al 30% del viewport */
+    overflow: hidden; /* Oculta el contenido que se sale del contenedor */
+    margin: 0 0; /* Centra horizontalmente el carrusel */
+    display: flex; /* Flexbox para centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center;
 }
 
-
-/* Asegúrate de que las imágenes del carrusel sean responsivas y ocupen todo el ancho del contenedor */
+/* Imágenes del carrusel: Ajuste de distribución y tamaño */
 .carousel-inner img {
-    width: 100%;
-    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    width: auto; /* Mantiene el ancho original de la imagen */
+    height: 100%; /* Se ajusta a la altura del carrusel */
+    object-fit: cover; /* Asegura que las imágenes se recorten y mantengan las proporciones sin deformarse */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    max-width: 100%; /* Evita que la imagen se estire más allá del ancho del contenedor */
 }
 
+
   
-  .images-container img {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: 50vh; /* La imagen ocupará la mitad de la altura de la pantalla (50% del viewport) */
-    object-fit: cover; /* Recorta la imagen si es necesario sin distorsionar */
-  }
-  
-  .image-gallery {
-    display: flex; /* Usa flexbox para alinear las imágenes en fila */
-    flex-direction: row; /* Alinea los elementos en una fila */
-    gap: 10px; /* Espacio entre las imágenes */
-    justify-content: center; /* Centra las imágenes horizontalmente en el contenedor */
-    padding: 10px; /* Espacio interno alrededor del contenedor */
-  }
-  
-  .gallery-image {
-    width: 300px; /* Ancho fijo para cada imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Cubre el área del contenedor sin distorsionar la imagen */
-    border-radius: 5px; /* Opcional: bordes redondeados para un estilo más atractivo */
-  }
+.image-gallery {
+    display: flex; 
+    flex-direction: row; 
+    gap: 10px; 
+    justify-content: center; 
+    padding: 10px;
+}
+
+.image-box {
+    position: relative;
+    width: 300px; /* Fija el ancho de las imágenes */
+    height: 400px; /* Fija la altura para que todas las imágenes tengan el mismo tamaño */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes llenen el contenedor sin deformarse */
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.image-caption h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.image-caption p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
   
   
   
