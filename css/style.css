@@ -163,25 +163,28 @@ main {
 
 .footer-global {
     position: relative;
-    background-color: #f8f8f8;
-    padding: 20px 0; /* Aumentar el padding para más espacio */
+    
+    padding: 0px 0; /* Aumentar el padding para más espacio */
     width: 100%;
     font-size: 16px;
     font-family: Arial, sans-serif;
     font-weight: bold;
     color: #333;
     text-align: center;
-    margin-top: 20px;
-    min-height: 100px; /* Aumentar la altura mínima para más espacio */
+    margin-top: 10px;
+    min-height: 120px; /* Aumentar la altura mínima para más espacio */
 }
 
 .footer-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; /* Distribuye los elementos equitativamente */
+    justify-content: space-evenly; /* Distribuye los elementos equitativamente */
     align-items: center;
     flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
     gap: 20px; /* Espacio entre los elementos */
+    background-color: #0d01299f;
+    color: white;
+   
 }
 
 .footer-content div {
@@ -193,7 +196,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px; /* Espacio entre los iconos sociales */
+    gap: 5px; /* Espacio entre los iconos sociales */
 }
 
 .footer-content .social-icons i {
