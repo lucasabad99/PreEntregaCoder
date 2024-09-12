@@ -161,91 +161,104 @@ main {
     flex: 1; /* Hace que el main ocupe todo el espacio disponible entre el header y footer */
 }
 
+/* Estilos para el footer global, que se aplica a toda la sección del pie de página */
 .footer-global {
-    position: relative;
-    
-    padding: 0px 0; /* Aumentar el padding para más espacio */
-    width: 100%;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-top: 10px;
-    min-height: 120px; /* Aumentar la altura mínima para más espacio */
+    position: relative; /* Posiciona el elemento en relación a su posición normal, permitiendo usar top, right, bottom, left si es necesario */
+    padding: 0px 0; /* Ajusta el padding (espacio interior) en la parte superior e inferior a 0, pero podrías aumentar para agregar más espacio si fuera necesario */
+    width: 100%; /* El footer ocupará el 100% del ancho disponible */
+    font-size: 16px; /* Define el tamaño del texto en 16px */
+    font-family: Arial, sans-serif; /* Establece la fuente a Arial o una sans-serif por defecto si no está disponible */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    color: #333; /* Establece el color del texto en un gris oscuro */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 10px; /* Añade un margen en la parte superior del footer para separarlo del contenido superior */
+    min-height: 120px; /* Establece una altura mínima de 120px para asegurar que haya suficiente espacio en el footer */
 }
 
+/* Estilos para el contenido dentro del footer */
 .footer-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; /* Distribuye los elementos equitativamente */
-    align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
-    gap: 20px; /* Espacio entre los elementos */
-    background-color: #0d01299f;
-    color: white;
-   
+    display: flex; /* Utiliza Flexbox para controlar el diseño del contenido dentro del footer */
+    flex-direction: row; /* Los elementos dentro del footer se alinearán en una fila horizontal */
+    justify-content: space-evenly; /* Distribuye los elementos de manera equitativa con el mismo espacio entre ellos */
+    align-items: center; /* Centra verticalmente los elementos dentro del footer */
+    flex-wrap: wrap; /* Permite que los elementos pasen a una nueva línea si no hay suficiente espacio horizontal */
+    gap: 20px; /* Añade un espacio de 20px entre cada uno de los elementos */
+    background-color: #0d01299f; /* Aplica un fondo de color semi-transparente (rgba) con un tono oscuro */
+    color: white; /* Establece el color del texto a blanco */
 }
 
+
+/* Aplica estilos a todos los divs dentro de .footer-content */
 .footer-content div {
-    flex: 1; /* Permite que cada div tome un espacio proporcional */
-    max-width: 200px; /* Limita el ancho máximo de cada div */
+    flex: 1; /* Permite que cada div tome una porción proporcional del espacio disponible */
+    max-width: 200px; /* Limita el ancho máximo de cada div a 200px */
 }
 
+/* Estilos para la sección de íconos sociales dentro del footer */
 .footer-content .social-icons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px; /* Espacio entre los iconos sociales */
+    display: flex; /* Utiliza Flexbox para organizar los íconos en una fila */
+    flex-direction: row; /* Alinea los íconos en una fila horizontal */
+    align-items: center; /* Centra verticalmente los íconos */
+    gap: 5px; /* Añade un espacio de 5px entre los íconos */
 }
 
+/* Estilos para los íconos sociales dentro de la clase social-icons */
 .footer-content .social-icons i {
-    font-size: 24px; /* Tamaño de los iconos */
-    color: #333; /* Color de los iconos */
-    text-decoration: none;
+    font-size: 24px; /* Define el tamaño de los íconos en 24px */
+    color: #333; /* Asigna un color gris oscuro a los íconos */
+    text-decoration: none; /* Elimina cualquier subrayado o decoración en los íconos */
 }
 
+/* Estilos para los enlaces (a) dentro de la clase social-icons */
 .footer-content .social-icons a {
-    color: #333; /* Color de los iconos en los enlaces */
-    transition: color 0.3s; /* Transición suave para el cambio de color */
+    color: #333; /* Aplica el color gris oscuro a los íconos en los enlaces */
+    transition: color 0.3s; /* Añade una transición suave para el cambio de color al pasar el ratón */
 }
 
+/* Estilos cuando el usuario pasa el ratón sobre los enlaces de los íconos sociales */
 .footer-content .social-icons a:hover {
-    color: #007bff; /* Color al pasar el ratón sobre los iconos */
+    color: #007bff; /* Cambia el color a un azul al pasar el ratón sobre los íconos */
 }
 
+/* Estilos para los párrafos dentro de footer-content */
 .footer-content p {
-    margin: 0; /* Elimina el margen para evitar espacios innecesarios */
-    padding: 5px 0; /* Espaciado vertical */
+    margin: 0; /* Elimina los márgenes por defecto para evitar espacios innecesarios */
+    padding: 5px 0; /* Añade un espaciado vertical de 5px arriba y abajo */
 }
 
+/* Estilos para el primer div dentro de footer-content */
 .footer-content div:first-of-type p {
-    font-size: 14px; /* Tamaño de fuente para el texto general */
+    font-size: 14px; /* Ajusta el tamaño de fuente de los párrafos en 14px */
 }
 
+/* Estilos para el último div dentro de footer-content */
 .footer-content div:last-of-type p {
-    font-size: 14px; /* Tamaño de fuente para el texto general */
+    font-size: 14px; /* Aplica un tamaño de fuente de 14px también en el último div */
 }
 
+/* Estilos específicos para los párrafos dentro de .social-icons */
 .footer-content .social-icons p {
-    font-size: 14px; /* Tamaño de fuente para el texto de redes sociales */
+    font-size: 14px; /* Establece el tamaño de fuente de los textos de redes sociales en 14px */
 }
 
-
+/* Estilos adicionales para la clase social-icons */
 .social-icons {
-    margin-top: 10px;
+    margin-top: 10px; /* Añade un margen superior de 10px a los íconos sociales */
 }
 
+/* Estilos para los enlaces de los íconos sociales */
 .social-icons a {
-    color: black;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 24px; /* Tamaño de los íconos */
+    color: black; /* Cambia el color de los enlaces a negro */
+    margin: 0 10px; /* Añade un margen horizontal de 10px para separar los íconos */
+    text-decoration: none; /* Elimina la subrayado en los enlaces */
+    font-size: 24px; /* Ajusta el tamaño de los íconos en 24px */
 }
 
+/* Estilos cuando el usuario pasa el ratón sobre los enlaces de íconos sociales */
 .social-icons a:hover {
-    color: #ddd; /* Color al pasar el ratón */
+    color: #ddd; /* Cambia el color de los íconos a gris claro (#ddd) cuando se pasa el ratón por encima */
 }
+
 
 
 
