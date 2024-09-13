@@ -10,46 +10,57 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Moda Lucas</h1>
-        <nav class="navbar navbar-dark custom-bg" >
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+  <header>
+    <h1>Moda Lucas</h1>
+    <nav class="navbar navbar-dark custom-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./pages/nuestraHistoria.html">Nuestra historia</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./pages/productos.html" >Productos</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./pages/trabajeconNosotros.html">Trabaje con nosotros</a>
-                    </li>
-                  </ul>
-                  <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
-                  </form>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/nuestraHistoria.html">Nuestra historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                        </li>
+                        
+                        <!-- Dropdown para Productos -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+                                <li><a class="dropdown-item" href="../pages/productos-boca.html">Boca Juniors</a></li>
+                                <li><a class="dropdown-item" href="./pages/productos-funko.html">Funko Pop</a></li>
+                                <li><a class="dropdown-item" href="./pages/productos-seleccion.html">Selección Argentina</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/trabajeconNosotros.html">Trabaje con nosotros</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
                 </div>
-              </div>
             </div>
-          </nav>
-    </header>
+        </div>
+    </nav>
+</header>
+
 
     <main>
       <section class="banner">
@@ -100,22 +111,22 @@
           <div class="image-box">
             <img src="./assets/img_0528-2e3634a610684e304017123479733560-1024-1024.jpeg" alt="" class="gallery-image">
             <div class="image-caption">
-              <h3>Título 1</h3>
-              <p>Descripción breve</p>
+              <h3>Boca Juniors</h3>
+              <p>Entra y mira todos los productos del club de la ribera que tenemos para vos</p>
             </div>
           </div>
           <div class="image-box">
             <img src="./assets/sddefault.jpg" alt="" class="gallery-image">
             <div class="image-caption">
-              <h3>Título 2</h3>
-              <p>Descripción breve</p>
+              <h3>Funko pop</h3>
+              <p>Desde el mundo del anime, tenemos todos los productos de coleccion</p>
             </div>
           </div>
           <div class="image-box">
             <img src="./assets/BRZGARHRZFIZ2ETPAQZ7NCD3QE.jpg" alt="" class="gallery-image">
             <div class="image-caption">
-              <h3>Título 3</h3>
-              <p>Descripción breve</p>
+              <h3>Seleccion Argentina</h3>
+              <p>No te pierdas los nuevos productos de la scaloneta</p>
             </div>
           </div>
         </div>
