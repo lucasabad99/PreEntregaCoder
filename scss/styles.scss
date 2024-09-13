@@ -1,0 +1,273 @@
+/* Variables */
+$primary-color: rgb(21, 21, 124);
+$secondary-color: white;
+$footer-bg: #0d01299f;
+$footer-text-color: white;
+$font-main: Arial, sans-serif;
+
+/* Mixin para flexbox */
+@mixin flexbox($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/* INDEX */
+header {
+  background-color: $primary-color;
+  color: $secondary-color;
+  @include flexbox(center, space-between);
+}
+
+ul {
+  list-style: none;
+  @include flexbox(row);
+}
+
+li {
+  margin: 0 20px;
+}
+
+h1 {
+  margin-left: 15px;
+  @include flexbox(center);
+}
+
+nav {
+  @include flexbox;
+  background-color: $primary-color;
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+  }
+}
+
+.banner {
+  @include flexbox(column, center);
+  margin-bottom: 20px;
+}
+
+.custom-bg {
+  background-color: $primary-color;
+}
+
+.images-container {
+  @include flexbox(row, space-around, stretch);
+  margin-bottom: 20px;
+  img {
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+    margin: 20px;
+    border-radius: 20px;
+  }
+}
+
+.subtitle-container {
+  text-align: center;
+  width: 100%;
+  color: $secondary-color;
+  background-color: $primary-color;
+  padding: 10px;
+  p {
+    margin: 0;
+    font-size: 24px;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  @include flexbox(column);
+  min-height: 100vh;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  margin: 0;
+  @include flexbox(center, center);
+  text-align: center;
+
+  .carousel-inner img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+  }
+}
+
+.image-gallery {
+  @include flexbox(row, center);
+  gap: 10px;
+  padding: 10px;
+}
+
+.image-box {
+  position: relative;
+  width: 300px;
+  height: 400px; 
+  overflow: hidden;
+
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: $secondary-color;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+    }
+  }
+}
+
+
+/* Footer */
+html, body {
+  height: 100%; /* Hace que tanto el html como el body ocupen el 100% de la altura del viewport */
+  margin: 0; /* Elimina márgenes predeterminados del navegador para html y body */
+  padding: 0; /* Elimina el relleno predeterminado */
+}
+
+main {
+  flex: 1; /* Permite que el main se expanda y ocupe el espacio disponible */
+  display: flex; /* Activa Flexbox para distribuir los elementos dentro del main */
+  flex-direction: column; /* Coloca los elementos en una columna, uno debajo del otro */
+  justify-content: space-between; /* Distribuye el contenido, dejando espacio entre el contenido principal y el footer */
+  min-height: 80vh; /* Asegura que el main ocupe al menos el 80% de la altura de la ventana */
+  margin-bottom: 120px;
+}
+
+.footer-global {
+  position: relative; /* Posiciona el footer de forma normal en el flujo del documento */
+  padding: 0; /* Elimina cualquier relleno interno en el footer */
+  width: 100%; /* Hace que el footer ocupe todo el ancho disponible */
+  font-size: 16px; /* Establece el tamaño de la fuente dentro del footer */
+  font-family: $font-main; /* Utiliza la fuente definida por la variable $font-main */
+  font-weight: bold; /* Aplica negrita al texto del footer */
+  color: #333; /* Establece el color del texto a gris oscuro */
+  text-align: center; /* Centra el texto dentro del footer */
+  margin-top: 10px; /* Añade un margen superior para separar el footer del contenido anterior */
+  min-height: 90px; /* Establece una altura mínima para el footer */
+
+  .footer-content {
+    @include flexbox(row, space-evenly, center); /* Aplica Flexbox con el mixin, organizando los elementos en una fila */
+    flex-wrap: wrap; /* Permite que los elementos pasen a una nueva línea si no caben horizontalmente */
+    gap: 20px; /* Añade un espacio de 20px entre los elementos del footer */
+    background-color: $footer-bg; /* Aplica el color de fondo definido en la variable $footer-bg */
+    color: $footer-text-color; /* Aplica el color de texto definido en la variable $footer-text-color */
+
+    div {
+      flex: 1; /* Hace que cada div ocupe una porción proporcional del espacio disponible */
+      max-width: 200px; /* Limita el ancho máximo de cada div a 200px */
+    }
+
+    .social-icons {
+      @include flexbox(row, center); /* Organiza los íconos sociales en una fila y los centra verticalmente */
+      gap: 5px; /* Añade un espacio de 5px entre los íconos sociales */
+      a, i {
+        font-size: 24px; /* Ajusta el tamaño de los íconos y enlaces a 24px */
+        color: #333; /* Asigna el color gris oscuro a los íconos y enlaces */
+        transition: color 0.3s; /* Añade una transición suave para el cambio de color al pasar el ratón */
+      }
+
+      a:hover {
+        color: #007bff; /* Cambia el color a azul cuando el ratón pasa sobre los enlaces */
+      }
+    }
+
+    p {
+      margin: 0; /* Elimina márgenes en los párrafos */
+      padding: 5px 0; /* Añade un relleno vertical de 5px */
+      &:first-of-type, &:last-of-type {
+        font-size: 14px; /* Ajusta el tamaño de fuente de los primeros y últimos párrafos a 14px */
+      }
+    }
+  }
+}
+//PRODUCTOS
+.main-productos {
+  padding: 20px;
+  min-height: 120px
+}
+
+
+.productos-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.img-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(25% - 20px);
+  max-width: 250px;
+  text-align: center;
+}
+
+.producto-img {
+  width: 100%;
+  height: 250px; /* Ajusta la altura de las imágenes */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.producto p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+
+
+
+/* Responsiveness */
+@media (max-width: 320px) {
+  header, ul, h1, .banner, main {
+    @include flexbox(column, center);
+  }
+
+  .image-gallery {
+    flex-direction: column;
+  }
+
+  .footer-global {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

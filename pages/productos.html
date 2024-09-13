@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css"> <!-- Ruta a tu archivo CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>     
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="../index.html">BocaFunk</a> <!-- Puedes cambiar el texto "Mi Sitio Web" por el nombre de tu sitio -->
+              <a class="navbar-brand" href="../index.html">BocaFunk</a> 
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -40,7 +40,7 @@
                   </ul>
                   <form class="d-flex mt-3" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success" type="submit">Buscar</button> <!-- Cambié "Search" a "Buscar" para mantener el idioma consistente -->
+                    <button class="btn btn-success" type="submit">Buscar</button> 
                   </form>
                 </div>
               </div>
@@ -50,35 +50,97 @@
     </header>
 
     <main class="main-productos">
-            <section class="productos-section">
-
-                <div class="img-productos">
-                    <img class="producto-img" src="../assets/BOCA-CAMISETA-2021-7.jpg" alt="Camiseta Boca Juniors">
-                    <img class="producto-img"src="../assets/1-7413e6b380659e720116987837960558-1024-1024.jpg" alt="Producto 1">
-                    <img class="producto-img"src="../assets/6facfecd4b9cc53827f3060e325220148eb259a9416c0fcde87d0370481deb4d172479.jpeg" alt="Producto 2">
-                    <img class="producto-img"src="../assets/14-bd5821f307c44973e516058252900714-480-0.jpg" alt="Producto 3">
-                    <img class="producto-img" src="../assets/img_0528-2e3634a610684e304017123479733560-1024-1024.jpeg" alt="Producto 18">
-                    <img class="producto-img"src="../assets/sddefault.jpg" alt="Otra Imagen">
-                    <img class="producto-img"src="../assets/Funko-Pop-Animation-Naruto-Shippuden-Jiraiya-Sage-Mode-AAA-Anime-Exclusive-Figure-1381.webp" alt="">
-                    <img class="producto-img"src="../assets/anime-naruto-tobi-1841-968e7ba1fe2ec0527616722512158006-640-0.jpg" alt="">
-                    <img class="producto-img" src="../assets/D_NQ_NP_699938-MLA31021291176_062019-O.webp" alt="Producto 11">
-                    <img class="producto-img"src="../assets/61nMgo3VEEL._AC_SL1001_.jpg" alt="Producto 4">
-                    <img class="producto-img"src="../assets/70ca5a4a-5509-42d9-a4e2-e3e32ff08f7f1-dc780b644268ba34e116866674066452-480-0.jpeg" alt="Producto 5">
-                    <img class="producto-img"src="../assets/71RxGMYcjuL._AC_UF894,1000_QL80_.jpg" alt="Producto 6">
-                    <img class="producto-img"src="../assets/81A3EeK+xoL._AC_UF894,1000_QL80_.jpg" alt="Producto 7">
-                    <img class="producto-img"src="../assets/5795317a761847d2bc412081bab66328.jpg" alt="Producto 8">
-                    <img class="producto-img"src="../assets/anime-naruto-tobi-1841-968e7ba1fe2ec0527616722512158006-640-0.jpg" alt="Producto 9">
-                    <img class="producto-img"src="../assets/ba20c6eb-5a82-42eb-8f03-80af1e384caf1-60b26a31ed34ead4c416888507980638-1024-1024.jpg" alt="Producto 10">
-                    <img class="producto-img" src="../assets/D_NQ_NP_732837-MLC52420087242_112022-O.webp" alt="Producto 12">
-                    <img class="producto-img" src="../assets/Funko-Pop-Animation-Ichigo-AAA-Anime-Exclusive-Peru.webp" alt="Producto 13">
-                    <img class="producto-img" src="../assets/Funko-Pop-Animation-Naruto-Shippuden-Jiraiya-Sage-Mode-AAA-Anime-Exclusive-Figure-1381.webp" alt="Producto 14">
-                    <img class="producto-img" src="../assets/Funko-POP-Anime-Attack-on-Titan-_46670_1-1.webp" alt="Producto 15">
-                    <img class="producto-img" src="../assets/images (1).jpeg" alt="Producto 16">
-                    <img class="producto-img" src="../assets/images.jpeg" alt="Producto 17">
-                </div>
-                
-            </section>
-    </main>
+      <section class="productos-section">
+          <div class="img-productos">
+              <div class="producto">
+                  <img class="producto-img" src="../assets/BOCA-CAMISETA-2021-7.jpg" alt="Camiseta Boca Juniors">
+                  <p>Camiseta Boca Juniors</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/1-7413e6b380659e720116987837960558-1024-1024.jpg" alt="Producto 1">
+                  <p>Producto 1</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/6facfecd4b9cc53827f3060e325220148eb259a9416c0fcde87d0370481deb4d172479.jpeg" alt="Producto 2">
+                  <p>Producto 2</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/14-bd5821f307c44973e516058252900714-480-0.jpg" alt="Producto 3">
+                  <p>Producto 3</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/img_0528-2e3634a610684e304017123479733560-1024-1024.jpeg" alt="Producto 18">
+                  <p>Producto 18</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/sddefault.jpg" alt="Otra Imagen">
+                  <p>Otra Imagen</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/Funko-Pop-Animation-Naruto-Shippuden-Jiraiya-Sage-Mode-AAA-Anime-Exclusive-Figure-1381.webp" alt="Funko Pop Jiraiya">
+                  <p>Funko Pop Jiraiya</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/anime-naruto-tobi-1841-968e7ba1fe2ec0527616722512158006-640-0.jpg" alt="Tobi Figura">
+                  <p>Tobi Figura</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/D_NQ_NP_699938-MLA31021291176_062019-O.webp" alt="Producto 11">
+                  <p>Producto 11</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/61nMgo3VEEL._AC_SL1001_.jpg" alt="Producto 4">
+                  <p>Producto 4</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/70ca5a4a-5509-42d9-a4e2-e3e32ff08f7f1-dc780b644268ba34e116866674066452-480-0.jpeg" alt="Producto 5">
+                  <p>Producto 5</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/71RxGMYcjuL._AC_UF894,1000_QL80_.jpg" alt="Producto 6">
+                  <p>Producto 6</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/81A3EeK+xoL._AC_UF894,1000_QL80_.jpg" alt="Producto 7">
+                  <p>Producto 7</p>
+              </div>
+               <div class="producto">
+                  <img class="producto-img" src="../assets/anime-naruto-tobi-1841-968e7ba1fe2ec0527616722512158006-640-0.jpg" alt="Producto 9">
+                  <p>Producto 9</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/ba20c6eb-5a82-42eb-8f03-80af1e384caf1-60b26a31ed34ead4c416888507980638-1024-1024.jpg" alt="Producto 10">
+                  <p>Producto 10</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/D_NQ_NP_732837-MLC52420087242_112022-O.webp" alt="Producto 12">
+                  <p>Producto 12</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/Funko-Pop-Animation-Ichigo-AAA-Anime-Exclusive-Peru.webp" alt="Ichigo Funko Pop">
+                  <p>Ichigo Funko Pop</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/Funko-Pop-Animation-Naruto-Shippuden-Jiraiya-Sage-Mode-AAA-Anime-Exclusive-Figure-1381.webp" alt="Producto 14">
+                  <p>Producto 14</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/Funko-POP-Anime-Attack-on-Titan-_46670_1-1.webp" alt="Attack on Titan Funko Pop">
+                  <p>Attack on Titan Funko Pop</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/images (1).jpeg" alt="Producto 16">
+                  <p>Producto 16</p>
+              </div>
+              <div class="producto">
+                  <img class="producto-img" src="../assets/images.jpeg" alt="Producto 17">
+                  <p>Producto 17</p>
+              </div>
+          </div>
+      </section>
+  </main>
+  
+  
 
     <footer class="footer-global">
       <div class="footer-content">
