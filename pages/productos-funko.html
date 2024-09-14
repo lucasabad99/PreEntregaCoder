@@ -3,15 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Productos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <header>
+    <h1>Moda Lucas</h1>
+    <nav class="navbar navbar-dark custom-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nuestraHistoria.html">Nuestra historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                        
+                        <!-- Dropdown para Productos -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+                                <li><a class="dropdown-item" href="../pages/productos-boca.html">Boca Juniors</a></li>
+                                <li><a class="dropdown-item" href="#">Funko Pop</a></li>
+                                <li><a class="dropdown-item" href="../pages/productos-seleccion.html">Selección Argentina</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./trabajeconNosotros.html">Trabaje con nosotros</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main class="main-productos">
+      <section class="productos-section">
+          <div class="img-productos">
+              
+
+            <div class="producto">
+                <img class="producto-img" src="../assets/61nMgo3VEEL._AC_SL1001_.jpg" alt="Funko Pop Levi">
+                <p>Funko Pop Levi</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/1111-1e17fe72c5e04e13c216862442219640-480-0.png" alt="Funko Pop Kiba and Akamaru">
+                <p>Funko Pop Kiba and Akamaru</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/81A3EeK+xoL._AC_UF894,1000_QL80_.jpg" alt="Funko Pop Sasuke Rinnegan">
+                <p>Funko Pop Sasuke Rinnegan</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/71RxGMYcjuL._AC_UF894,1000_QL80_.jpg" alt="Funko Pop Konan">
+                <p>Funko Pop Konan</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/20220518011449_1.webp" alt="Funko Pop Boa Hancock">
+                <p>Funko Pop Boa Hancock</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/anime-naruto-tobi-1841-968e7ba1fe2ec0527616722512158006-640-0.jpg" alt="Funko Pop Tobi">
+                <p>Funko Pop Tobi</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/D_945879-MLA76018830790_052024-C.jpg" alt="Funko Pop L with Cake">
+                <p>Funko Pop L with Cake</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/D_NQ_NP_699938-MLA31021291176_062019-O.webp" alt="Funko Pop Sasuke">
+                <p>Funko Pop Sasuke</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/D_NQ_NP_732837-MLC52420087242_112022-O.webp" alt="Funko Pop Mikasa Ackerman">
+                <p>Funko Pop Mikasa Ackerman</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/D_NQ_NP_861524-MLA45216746087_032021-O.webp" alt="Funko Pop Yugi Muto">
+                <p>Funko Pop Yugi Muto</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/yuji1-903db118793ce0f4d516650096091476-640-0.jpg" alt="Funko Pop Yuji Itadori">
+                <p>Funko Pop Yuji Itadori</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/s-l1200.jpg" alt="Funko Pop Mew">
+                <p>Funko Pop Mew</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/one-piece-funko-pop-a-d5e8cc74666063628d17077748924680-1024-1024.jpg" alt="Funko Pop Shanks">
+                <p>Funko Pop Shanks</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/kei.webp" alt="Funko Pop Kei Tsukishima">
+                <p>Funko Pop Kei Tsukishima</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/images.jpg" alt="Funko Pop Kasumi Miwa">
+                <p>Funko Pop Kasumi Miwa</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/images.jpeg" alt="Funko Pop Tsunade">
+                <p>Funko Pop Tsunade</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/images (1).jpeg" alt="Funko Pop Izumo Kamizuki">
+                <p>Funko Pop Izumo Kamizuki</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/funko-pop-videl-528-dragon-ball-z-d_nq_np_770198-mla31638348361_072019-f-11-1c73eec381bac4688415875939864371-1024-1024.jpg" alt="Funko Pop Videl">
+                <p>Funko Pop Videl</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Funko-Pop-Mirajane-Strauss-1050-Fairy-Tail-300x300.jpg" alt="Funko Pop Mirajane Strauss">
+                <p>Funko Pop Mirajane Strauss</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/FUNKO-POP-Avatar-The-Last-Airbender-Varios-modelos-disponibles-original-juguetes-ni-os-ni-as-regalos.webp" alt="Funko Pop Ty Lee">
+                <p>Funko Pop Ty Lee</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/FUNKO-POP-Avatar-The-Last-Airbender-Varios-modelos-disponibles-original-juguetes-ni-os-ni-as-regalos (1).webp" alt="Funko Pop Fire Lord Ozai">
+                <p>Funko Pop Fire Lord Ozai</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Funko-POP-Anime-Attack-on-Titan-_46670_1-1.webp" alt="Funko Pop Colossal Titan">
+                <p>Funko Pop Colossal Titan</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Funko-Pop-Animation-Demon-Slayer-Giyu-Tomioka-AAA-Anime-Exclusive-PERU.webp" alt="Funko Pop Giyu Tomioka">
+                <p>Funko Pop Giyu Tomioka</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Funko-Pop-Animation-Ichigo-AAA-Anime-Exclusive-Peru.webp" alt="Funko Pop Ichigo">
+                <p>Funko Pop Ichigo</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Funko-POP-Animation-My-Hero-Academia-Tsuyu_c9278651-8792-46dc-ba68-e13c914d1fff_1.9766b6667427098a93511ef84c2b2d7b.webp" alt="Funko Pop Tsuyu">
+                <p>Funko Pop Tsuyu</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Funko-Pop-Animation-Naruto-Shippuden-Jiraiya-Sage-Mode-AAA-Anime-Exclusive-Figure-1381.webp" alt="Funko Pop Jiraiya Sage Mode">
+                <p>Funko Pop Jiraiya Sage Mode</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/D_NQ_NP_902586-MLA54763800950_032023-O.webp" alt="Funko Pop Anbu Itachi">
+                <p>Funko Pop Anbu Itachi</p>
+              </div>
+              
+              
+          </div>
+      </section>
+  </main>
+  
+  
+
+    <footer class="footer-global">
+      <div class="footer-content">
+        <div>
+          <p>2024 Moda Ambar. Todos los derechos reservados.</p>
+        </div>
+        
+        <div class="social-icons">
+               <p>Seguinos en las redes</p>
+            <a href="https://www.facebook.com/tu-pagina" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/tu-perfil" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div>
+          <p>Nuestros horarios</p>
+          <p>La Boca</p>
+          <P> L-D 10:00 AM - 18:00PM</P>
+        </div>
+        <div><p>Trabaja con nosotros</p></div>
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

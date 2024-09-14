@@ -11,7 +11,7 @@
 </head>
 <body>
   <header>
-    <h1>Moda Lucas</h1>
+    <h1>Moda Ambar</h1>
     <nav class="navbar navbar-dark custom-bg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"></a>
@@ -25,32 +25,36 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/nuestraHistoria.html">Nuestra historia</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-                        </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/nuestraHistoria.html">Nuestra historia</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                    </li>
+            
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+                            <li><a class="dropdown-item" href="./pages/productos-boca.html">Boca Juniors</a></li>
+                            <li><a class="dropdown-item" href="./pages/productos-funko.html">Funko Pop</a></li>
+                            <li><a class="dropdown-item" href="./pages/productos-seleccion.html">Selección Argentina</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/trabajeconNosotros.html">Trabaje con nosotros</a>
+                    </li>
+                    
                         
-                        <!-- Dropdown para Productos -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="productosDropdown">
-                                <li><a class="dropdown-item" href="../pages/productos-boca.html">Boca Juniors</a></li>
-                                <li><a class="dropdown-item" href="./pages/productos-funko.html">Funko Pop</a></li>
-                                <li><a class="dropdown-item" href="./pages/productos-seleccion.html">Selección Argentina</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/trabajeconNosotros.html">Trabaje con nosotros</a>
-                        </li>
-                    </ul>
+                        
+                      </ul>
                     <form class="d-flex mt-3" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-success" type="submit">Search</button>
@@ -160,6 +164,8 @@
     </div>
     </footer>
     
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

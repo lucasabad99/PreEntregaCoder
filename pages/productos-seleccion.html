@@ -3,15 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Productos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <header>
+    <h1>Moda Lucas</h1>
+    <nav class="navbar navbar-dark custom-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nuestraHistoria.html">Nuestra historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                        
+                        <!-- Dropdown para Productos -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+                                <li><a class="dropdown-item" href="../pages/productos-boca.html">Boca Juniors</a></li>
+                                <li><a class="dropdown-item" href="../pages/productos-funko.html">Funko Pop</a></li>
+                                <li><a class="dropdown-item" href="#">Selección Argentina</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./trabajeconNosotros.html">Trabaje con nosotros</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main class="main-productos">
+      <section class="productos-section">
+          <div class="img-productos">
+             
+            <div class="producto">
+                <img class="producto-img" src="../assets/Camiseta_Arquero_Argentina_24_Ninos_Negro_IX7792_01_laydown.avif" alt="Camiseta Arquero Argentina 24 Niños Negro">
+                <p>Camiseta Arquero Argentina 24 Niños Negro</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Camiseta_Titular_Argentina_24_Ninos_Blanco_IP8392_01_laydown.avif" alt="Camiseta Titular Argentina 24 Niños Blanco">
+                <p>Camiseta Titular Argentina 24 Niños Blanco</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Campera_Argentina_Tiro_24_All-Weather_Beige_IQ0810_01_laydown.avif" alt="Campera Argentina Tiro 24 All-Weather Beige">
+                <p>Campera Argentina Tiro 24 All-Weather Beige</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Campera_Argentina_Tiro_24_All-Weather_Gris_IQ0809_01_laydown.avif" alt="Campera Argentina Tiro 24 All-Weather Gris">
+                <p>Campera Argentina Tiro 24 All-Weather Gris</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Conjunto_Jogger_para_Bebe_Argentina_24_Azul_IU2144_01_laydown.avif" alt="Conjunto Jogger para Bebé Argentina 24 Azul">
+                <p>Conjunto Jogger para Bebé Argentina 24 Azul</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Musculosa_Argentina_Tiro_24_Beige_IQ0814_01_laydown.avif" alt="Musculosa Argentina Tiro 24 Beige">
+                <p>Musculosa Argentina Tiro 24 Beige</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Remera_Argentina_Estampada_24_Blanco_IU2149_01_laydown.avif" alt="Remera Argentina Estampada 24 Blanco">
+                <p>Remera Argentina Estampada 24 Blanco</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Short_Titular_Argentina_24_Ninos_Blanco_IP8393_01_laydown.avif" alt="Short Titular Argentina 24 Niños Blanco">
+                <p>Short Titular Argentina 24 Niños Blanco</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Shorts_Titular_Negro_Argentina_24_Negro_IP8405_01_laydown.avif" alt="Shorts Titular Negro Argentina 24 Negro">
+                <p>Shorts Titular Negro Argentina 24 Negro</p>
+              </div>
+              
+              <div class="producto">
+                <img class="producto-img" src="../assets/Shorts_Uniforme_Alternativo_Argentina_24_Ninos_Azul_IP8389_01_laydown.avif" alt="Shorts Uniforme Alternativo Argentina 24 Niños Azul">
+                <p>Shorts Uniforme Alternativo Argentina 24 Niños Azul</p>
+              </div>
+              
+           
+          </div>
+      </section>
+  </main>
+  
+  
+
+    <footer class="footer-global">
+      <div class="footer-content">
+        <div>
+          <p>2024 Moda Ambar. Todos los derechos reservados.</p>
+        </div>
+        
+        <div class="social-icons">
+               <p>Seguinos en las redes</p>
+            <a href="https://www.facebook.com/tu-pagina" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/tu-perfil" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div>
+          <p>Nuestros horarios</p>
+          <p>La Boca</p>
+          <P> L-D 10:00 AM - 18:00PM</P>
+        </div>
+        <div><p>Trabaja con nosotros</p></div>
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

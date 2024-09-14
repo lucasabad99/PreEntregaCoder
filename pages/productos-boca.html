@@ -3,15 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Productos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <header>
+    <h1>Moda Lucas</h1>
+    <nav class="navbar navbar-dark custom-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nuestraHistoria.html">Nuestra historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                        
+                        <!-- Dropdown para Productos -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+                                <li><a class="dropdown-item" href="#">Boca Juniors</a></li>
+                                <li><a class="dropdown-item" href="../pages/productos-funko.html">Funko Pop</a></li>
+                                <li><a class="dropdown-item" href="../pages/productos-seleccion.html">Selección Argentina</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./trabajeconNosotros.html">Trabaje con nosotros</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main class="main-productos">
+      <section class="productos-section">
+          <div class="img-productos">
+              <div class="producto">
+  <img class="producto-img" src="../assets/Buzo_Boca_Juniors_Essentials_con_Cuello_Redondo_Azul_IL1052_01_laydown.avif" alt="Producto 1">
+  <p>Producto 1</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Buzo_Ligero_de_Entrenamiento_Boca_Juniors_Turquesa_HY0403_01_laydown.avif" alt="Producto 2">
+  <p>Producto 2</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Camiseta_Titular_Authentic_Boca_Juniors_24-25_Manga_larga_Azul_IS7459_01_laydown.avif" alt="Producto 3">
+  <p>Producto 3</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Camiseta_Titular_Boca_Juniors_24-25_Azul_IU1232_01_laydown.avif" alt="Producto 4">
+  <p>Producto 4</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/camiseta-titular-boca-juniors-24-25.avif" alt="Producto 5">
+  <p>Producto 5</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Campera_All-Weather_Boca_Juniors_Amarillo_HY0406_01_laydown.avif" alt="Producto 6">
+  <p>Producto 6</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Campera_de_Invierno_Boca_Juniors_24-25_Azul_IS5588_01_laydown.avif" alt="Producto 7">
+  <p>Producto 7</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Campera_de_Presentacion_Boca_Juniors_24-25_Amarillo_IS5585_01_laydown.avif" alt="Producto 8">
+  <p>Producto 8</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Campera_Parka_Stadium_Boca_Juniors_24-25_Azul_IS5590_01_laydown.avif" alt="Producto 9">
+  <p>Producto 9</p>
+</div>
+<div class="producto">
+  <img class="producto-img" src="../assets/BOCA_SZN_WB_Blanco_IT3839_01_laydown.avif" alt="Producto 10">
+  <p>Producto 10</p>
+</div>
+<div class="producto">
+  <img class="producto-img" src="../assets/Pantalon_de_Entrenamiento_Boca_Juniors_Azul_HY0401_01_laydown.avif" alt="Producto 1">
+  <p>Producto 1</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Remera_Boca_Juniors_24-25_Amarillo_IS5572_01_laydown.avif" alt="Producto 2">
+  <p>Producto 2</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Remera_Boca_Juniors_24-25_Azul_IS5571_01_laydown.avif" alt="Producto 3">
+  <p>Producto 3</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Remera_Boca_Juniors_Essentials_Azul_IL1051_01_laydown.avif" alt="Producto 4">
+  <p>Producto 4</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Short_Titular_Boca_Juniors_24-25_Azul_IU1233_01_laydown.avif" alt="Producto 5">
+  <p>Producto 5</p>
+</div>
+
+<div class="producto">
+  <img class="producto-img" src="../assets/Short_Uniforme_Alternativo_Boca_Juniors_23-24_Amarillo_HT3695_01_laydown.avif" alt="Producto 6">
+  <p>Producto 6</p>
+</div>
+
+
+          </div>
+      </section>
+  </main>
+  
+  
+
+    <footer class="footer-global">
+      <div class="footer-content">
+        <div>
+          <p>2024 Moda Ambar. Todos los derechos reservados.</p>
+        </div>
+        
+        <div class="social-icons">
+               <p>Seguinos en las redes</p>
+            <a href="https://www.facebook.com/tu-pagina" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/tu-perfil" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div>
+          <p>Nuestros horarios</p>
+          <p>La Boca</p>
+          <P> L-D 10:00 AM - 18:00PM</P>
+        </div>
+        <div><p>Trabaja con nosotros</p></div>
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
