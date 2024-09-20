@@ -329,39 +329,104 @@ top: 50px;
 }
 
 
- // CONTACTOS
+ 
+//CONTACTOS
 
- .contactosMain {
+.contactosMain {
+  display: flex;
+  justify-content: center; // Centra horizontalmente ambos lados (left-side y TextoContacto)
+  align-items: flex-start; // Alinea los contenedores al principio del eje vertical
+  gap: 40px; // Añade espacio entre los dos contenedores
+  margin: 40px auto; // Añade un margen superior e inferior, y centra la sección en el medio de la página
+  width: 90%; // Controla el ancho general del contenedor principal
+}
 
-display: flex;
-justify-content: center;
-flex-direction: row;
-align-items: center;
-margin: 200px;
-gap: 10px;
-width: 32.2%;
- }
+.left-side, .TextoContacto {
+  background-color: #f8f9fa; // Un color de fondo claro para el contenedor
+  padding: 20px; // Espaciado interno dentro del contenedor
+  border-radius: 12px; // Bordes redondeados para suavizar las esquinas
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade una sombra sutil para dar un efecto elevado
+  width: 50%; // Ambos contenedores ocupan el 50% del ancho cada uno
+}
 
- .jefes{
+.mapa iframe {
+  width: 100%; // El mapa ocupa todo el ancho del contenedor
+  height: 350px; // Ajusta la altura del mapa
+  border-radius: 12px; // Bordes redondeados para que coincidan con el estilo del contenedor
+  border: 0; // Quita cualquier borde del iframe
+}
 
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: start;
-padding: 10px;
-gap: 10px;
-background-color: #007bff;
+.jefes {
+  margin-top: 20px; // Añade espacio entre el mapa y el bloque de jefes
+  background-color: #007bff; // Fondo azul
+  color: white; // Texto blanco
+  padding: 20px;
+  border-radius: 8px; // Bordes redondeados
+  text-align: center; // Texto centrado
+}
 
-color: antiquewhite;
-border-radius: 10px;
- }
+.TextoContacto img {
+  margin-top: 20px; // Espaciado entre el párrafo y la imagen
+  width: 100%; // La imagen ocupa todo el ancho disponible dentro del contenedor
+  border-radius: 12px; // Bordes redondeados para que se vea bien con el resto del diseño
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade sombra a la imagen para que se vea elevada
+}
 
- .TextoContacto{
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- width: 32%;
+//Trabaje con nosotros
 
+.sideLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px; // Limita el ancho del formulario
+  background-color: #f8f9fa; // Fondo claro para el formulario
+  border-radius: 10px; // Bordes redondeados
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra sutil para darle profundidad
+  margin: 20px auto; // Centrar el formulario y darle un poco de margen
+}
 
- }
+.sideLeft .col-auto {
+  width: 100%; // Asegura que los inputs ocupen todo el ancho del contenedor
+}
+
+.form-control {
+  width: 100%; // El input ocupa todo el ancho del contenedor padre
+  padding: 10px; // Espaciado interno
+  border: 1px solid #ced4da; // Borde sutil alrededor de los campos de entrada
+  border-radius: 5px; // Bordes suaves para los campos de entrada
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); // Sombra interna para darle profundidad al input
+}
+
+button {
+  width: 100%; // Botones ocupan todo el ancho
+  padding: 10px; // Espaciado interno
+  font-size: 16px; // Tamaño de fuente más grande para mejor legibilidad
+  border-radius: 5px; // Bordes redondeados
+}
+
+button[type="submit"] {
+  background-color: #007bff; // Color azul para el botón de enviar
+  color: white; // Texto blanco
+  border: none; // Sin borde
+  transition: background-color 0.3s ease; // Efecto de transición en el hover
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; // Color más oscuro en el hover
+}
+
+button[type="reset"] {
+  background-color: transparent;
+  border: 2px solid #6c757d; // Borde gris para el botón de reset
+  color: #6c757d;
+  transition: background-color 0.3s ease, color 0.3s ease; // Efecto de transición en el hover
+}
+
+button[type="reset"]:hover {
+  background-color: #6c757d;
+  color: white;
+}
