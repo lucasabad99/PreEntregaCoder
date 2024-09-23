@@ -306,73 +306,44 @@ main {
   top: 50px;
 }
 
-.contactosMain {
+/* Contenedor para ambos lados */
+.container-sides {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  margin: 40px auto;
-  width: 90%;
-}
-
-.left-side, .TextoContacto {
-  background-color: #f8f9fa;
+  justify-content: center; /* Centra ambos lados en la página */
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 50%;
+  gap: 30px; /* Espacio entre los dos lados */
 }
 
-.mapa iframe {
-  width: 100%;
-  height: 350px;
-  border-radius: 12px;
-  border: 0;
-}
-
-.jefes {
-  margin-top: 20px;
-  background-color: #007bff;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.TextoContacto img {
-  margin-top: 20px;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+/* Lado izquierdo (Formulario) */
 .sideLeft {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  padding: 20px;
-  gap: 20px;
+  align-items: center; /* Centra los elementos del formulario */
+  justify-content: flex-start;
   width: 100%;
-  max-width: 600px;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
+  max-width: 600px; /* Ajusta el ancho del formulario */
+  background-color: #f8f9fa; /* Fondo claro */
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 .sideLeft .col-auto {
-  width: 100%;
+  width: 100%; /* Los inputs ocupan todo el ancho del contenedor */
+  margin-bottom: 15px; /* Espacio entre cada input */
 }
 
 .form-control {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ced4da;
+  width: 100%; /* Input ocupa todo el ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ced4da; /* Borde */
   border-radius: 5px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* Botones */
 button {
   width: 100%;
   padding: 10px;
@@ -401,6 +372,38 @@ button[type=reset] {
 button[type=reset]:hover {
   background-color: #6c757d;
   color: white;
+}
+
+/* Lado derecho */
+/* Estilos para el contenedor principal sideRight */
+.sideRight {
+  display: flex;
+  flex-direction: column; /* Coloca los bloques uno debajo del otro */
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 300px; /* Ajusta el ancho para no ocupar mucho espacio */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 20px; /* Espacio entre los bloques */
+}
+
+/* Estilo para cada bloque dentro de sideRight */
+.info-block {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: start;
+}
+
+/* Estilo para las imágenes dentro de los bloques */
+.info-block img {
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
