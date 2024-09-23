@@ -306,6 +306,46 @@ main {
   top: 50px;
 }
 
+.contactosMain {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px auto;
+  width: 90%;
+}
+
+.left-side, .TextoContacto {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  border: 0;
+}
+
+.jefes {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.TextoContacto img {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Contenedor para ambos lados */
 .container-sides {
   display: flex;

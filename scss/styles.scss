@@ -330,8 +330,50 @@ top: 50px;
 
 
  
-//CONTACTOS
 
+//CONTACTOS
+.contactosMain {
+  display: flex;
+  justify-content: center; // Centra horizontalmente ambos lados (left-side y TextoContacto)
+  align-items: flex-start; // Alinea los contenedores al principio del eje vertical
+  gap: 40px; // Añade espacio entre los dos contenedores
+  margin: 40px auto; // Añade un margen superior e inferior, y centra la sección en el medio de la página
+  width: 90%; // Controla el ancho general del contenedor principal
+}
+.left-side, .TextoContacto {
+  background-color: #f8f9fa; // Un color de fondo claro para el contenedor
+  padding: 20px; // Espaciado interno dentro del contenedor
+  border-radius: 12px; // Bordes redondeados para suavizar las esquinas
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade una sombra sutil para dar un efecto elevado
+  width: 50%; // Ambos contenedores ocupan el 50% del ancho cada uno
+}
+.mapa iframe {
+  width: 100%; // El mapa ocupa todo el ancho del contenedor
+  height: 350px; // Ajusta la altura del mapa
+  border-radius: 12px; // Bordes redondeados para que coincidan con el estilo del contenedor
+  border: 0; // Quita cualquier borde del iframe
+}
+
+.jefes {
+  margin-top: 20px; // Añade espacio entre el mapa y el bloque de jefes
+  background-color: #007bff; // Fondo azul
+  color: white; // Texto blanco
+  padding: 20px;
+  border-radius: 8px; // Bordes redondeados
+  text-align: center; // Texto centrado
+}
+.TextoContacto img {
+  margin-top: 20px; // Espaciado entre el párrafo y la imagen
+  width: 100%; // La imagen ocupa todo el ancho disponible dentro del contenedor
+  border-radius: 12px; // Bordes redondeados para que se vea bien con el resto del diseño
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade sombra a la imagen para que se vea elevada
+}
+
+
+
+
+
+//TRABAJE CON NOSOTROS
 /* Contenedor para ambos lados */
 .container-sides {
   display: flex;
