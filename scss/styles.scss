@@ -303,33 +303,50 @@ main {
 
 //Nuestra historia
 
-.div-texto1{
-  background-color: #007bff;
-  color: black;
-  padding-top: 10px;
-  margin: 10px;
-  display: flex;
-  justify-content:center;
-  flex-direction: column;
-  background-color: #007bff;
-  position: relative;
-   top: 100px;
+// Estilo para el contenedor principal de la página "Nuestra Historia"
+.mainHistory {
+  display: flex;              // Aplica flexbox para organizar el contenido.
+  flex-direction: column;      // Coloca los elementos en una columna, uno debajo del otro.
+  justify-content: center;     // Centra los elementos verticalmente en el contenedor.
+  align-items: center;         // Centra los elementos horizontalmente.
 }
 
-.div-texto2{
-position: relative;
-padding-top: 10px;
-margin: 10px;
-background-color: antiquewhite;
-display: flex;
-justify-content: center;
-flex-direction: column;
-color: black;
-top: 50px;
+// Estilo para el primer bloque de texto (texto1)
+.div-texto1 {
+  display: flex;              // Aplica flexbox para organizar el contenido.
+  flex-direction: column;      // Coloca los elementos en una columna, uno debajo del otro.
+  justify-content: center;     // Centra los elementos verticalmente en el contenedor.
+  align-items: center;      
+  //background-color: #007bff;   // Define un fondo azul (color primario de Bootstrap).
+  color: black;                // Establece el color del texto en negro.
+  //padding-top: 10px;           // Agrega 10 píxeles de espacio en la parte superior.
+  //margin: 10px;                // Agrega un margen de 10 píxeles alrededor del div.
+  position: relative;          // Define la posición relativa, útil para posicionar elementos internos.
+}
+
+// Estilo para el segundo bloque de texto (texto2)
+.div-texto2 {
+  background-color: antiquewhite; // Establece un fondo color crema.
+  color: black;                   // Define el color del texto en negro.
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding-top: 20px;
+   width: 50%;
 }
 
 
  
+
+
+
+
+
+
+
+
+
 
 //CONTACTOS
 .contactosMain {
@@ -368,6 +385,12 @@ top: 50px;
   border-radius: 12px; // Bordes redondeados para que se vea bien con el resto del diseño
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade sombra a la imagen para que se vea elevada
 }
+
+
+
+
+
+
 
 
 

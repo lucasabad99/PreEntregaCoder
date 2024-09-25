@@ -281,29 +281,31 @@ main {
     padding: 10px;
   }
 }
-.div-texto1 {
-  background-color: #007bff;
-  color: black;
-  padding-top: 10px;
-  margin: 10px;
+.mainHistory {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  background-color: #007bff;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-texto1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
   position: relative;
-  top: 100px;
 }
 
 .div-texto2 {
-  position: relative;
-  padding-top: 10px;
-  margin: 10px;
   background-color: antiquewhite;
+  color: black;
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: black;
-  top: 50px;
+  padding-top: 20px;
+  width: 50%;
 }
 
 .contactosMain {
