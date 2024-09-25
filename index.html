@@ -11,59 +11,41 @@
 </head>
 <body>
   <header>
-    <h1>Moda Ambar</h1>
-    <nav class="navbar navbar-dark custom-bg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/nuestraHistoria.html">Nuestra historia</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-                    </li>
-            
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Productos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="productosDropdown">
-                            <li><a class="dropdown-item" href="./pages/productos-boca.html">Boca Juniors</a></li>
-                            <li><a class="dropdown-item" href="./pages/productos-funko.html">Funko Pop</a></li>
-                            <li><a class="dropdown-item" href="./pages/productos-seleccion.html">Selección Argentina</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/trabajeconNosotros.html">Trabaje con nosotros</a>
-                    </li>
-                    
-                        
-                        
-                      </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
+    <div class="navAlineado">
+        <h1>Moda Ambar</h1>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="./pages/nuestraHistoria.html">Nuestra historia</a></li>
+                <li><a href="./pages/productos-boca.html">Productos</a></li>
+                <li><a href="./pages/trabajeconNosotros.html">Trabaje con nosotros</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Botón del menú hamburguesa (solo visible en responsive) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+
+    <!-- Menú desplegable offcanvas para móvil -->
+    <div class="offcanvas offcanvas-end" id="offcanvasMenu" tabindex="-1" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasMenuLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </nav>
+        <div class="offcanvas-body">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="./pages/nuestraHistoria.html">Nuestra historia</a></li>
+                <li><a href="./pages/productos-boca.html">Productos</a></li>
+                <li><a href="./pages/trabajeconNosotros.html">Trabaje con nosotros</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
 </header>
+
 
 
     <main>
@@ -83,7 +65,7 @@
               <img src="./assets/5b262629a153363a7f0e150a6ca9dffb.png" class="d-block w-100" alt="Nueva imagen2">
             </div>
             <div class="carousel-item">
-              <img src="./assets/wallpapersden.com_itachi-uchiha-4k-naruto-red-night_3840x1975.jpg" class="d-block w-100" alt="Nueva imagen3">
+              <img src="./assets/thumb-1920-669308.jpg" class="d-block w-100" alt="Nueva imagen3">
             </div>
             <div class="carousel-item">
               <img src="./assets/oa3x8t30xos71.jpg" class="d-block w-100" alt="Nueva imagen4">
@@ -92,7 +74,7 @@
               <img src="./assets/berserk-uhvqeutwahosu8bz.jpg" class="d-block w-100" alt="Nueva imagen5">
             </div>
             <div class="carousel-item">
-              <img src="./assets/wp8864733.webp" class="d-block w-100" alt="Nueva imagen6">
+              <img src="./assets/naruto-uzumaki-in-battle-anime-desktop-wallpaper-preview.jpg" class="d-block w-100" alt="Nueva imagen6">
             </div>
           </div>
         
@@ -119,13 +101,15 @@
               <p>Entra y mira todos los productos del club de la ribera que tenemos para vos</p>
             </div>
           </div>
+        
           <div class="image-box">
-            <img src="./assets/sddefault.jpg" alt="" class="gallery-image">
+            <img src="./assets/61vO4TJWQdL._AC_SL1000_800x.webp" alt="" class="gallery-image">
             <div class="image-caption">
               <h3>Funko pop</h3>
               <p>Desde el mundo del anime, tenemos todos los productos de coleccion</p>
             </div>
           </div>
+        
           <div class="image-box">
             <img src="./assets/BRZGARHRZFIZ2ETPAQZ7NCD3QE.jpg" alt="" class="gallery-image">
             <div class="image-caption">
