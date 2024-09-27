@@ -13,6 +13,10 @@ $font-main: Arial, sans-serif;
   align-items: $align;
 }
 
+
+
+
+
 /* INDEX */
 // Estilos generales para el header
 header {
@@ -20,65 +24,24 @@ header {
   color: $secondary-color;
   padding: 10px 20px;
   position: relative; // Para manejar la posición del menú correctamente
-
-  // Flexbox para alinear los elementos del header
-  .navAlineado {
-    display: flex;
-    justify-content: flex-start; // H1 se queda a la izquierda
-    align-items: center;
-    position: relative; // Para que el menú pueda posicionarse centrado
-  }
-
-  h1 {
-    margin-left: 15px;
-    text-align: left;
-    flex: 0 1 auto; // Mantener el H1 fijo a la izquierda
-  }
-
-  // Menú centrado
-  .nav-menu {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); // Centramos el menú en la página
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 30px; // Espacio entre los items del menú
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-
-      li {
-        margin: 0;
-        a {
-          text-decoration: none;
-          color: $secondary-color;
-          font-weight: bold;
-          &:hover {
-            color: darken($secondary-color, 10%);
-          }
-        }
-      }
-    }
-  }
-
-  // Ocultamos el botón del menú hamburguesa en pantallas grandes
-  .navbar-toggler {
-    display: none;
-  }
 }
 
-// Estilos para el responsive
-@media (max-width: 768px) {
+
+
+// Menú hamburguesa en responsive
+@media (max-width: 320px) {
   .nav-menu {
-    display: none; // Ocultamos el menú en pantallas pequeñas
+    display: none; // Ocultar el menú en pantallas pequeñas
   }
 
   .navbar-toggler {
-    display: block; // Mostramos el botón del menú hamburguesa
+    display: block; // Mostrar el botón del menú hamburguesa en pantallas pequeñas
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
   }
 
-  // Estilos del menú offcanvas para pantallas móviles
   .offcanvas {
     background-color: $primary-color;
     color: $secondary-color;
@@ -97,60 +60,127 @@ header {
   }
 }
 
+// Ajustes para pantallas pequeñas
+@media (max-width: 768px) {
+  .carousel {
+    height: auto;
+  }
+
+  .subtitle-container {
+    margin-top: -10px; // Ajustar el subtítulo más cerca en pantallas pequeñas
+  }
+}
 
 
 
+// CAROUSEL INDEX
 .banner {
-  @include flexbox(column, center);
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 0;
 }
 
-.custom-bg {
-  background-color: $primary-color;
-}
+.carousel {
+  width: 100%;
+  height: auto; // Dejar que se ajuste automáticamente
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 
-.images-container {
-  @include flexbox(row, space-around, stretch);
-  margin-bottom: 20px;
-  img {
-    width: 700px;
-    height: 700px;
+  .carousel-inner img {
+    width: 100%;
+    height: auto; // Ajustamos la altura automáticamente
     object-fit: cover;
-    margin: 20px;
-    border-radius: 20px;
+    max-width: 100%;
   }
 }
 
 .subtitle-container {
   text-align: center;
   width: 100%;
-  color: $secondary-color;
-  background-color: $primary-color;
-  padding: 10px;
+ // padding: 10px;
+  margin-top: -5px; // Pegar el subtítulo al carrusel
+  margin-bottom: 0;
+
   p {
+    color: white;
     margin: 0;
     font-size: 24px;
+    background-color: $primary-color;
   }
 }
 
-.carousel {
-  width: 100%;
-  max-width: 100%;
-  height: 40vh;
-  overflow: hidden;
-  margin: 0px;
-  @include flexbox(center, center);
-  text-align: center;
+//NAV INDEX
 
-  .carousel-inner img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    max-width: 100%;
-  }
+.navAlineado{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar {
+  background-color: rgb(21, 21, 124) !important; // Cambia el color de fondo del menú
 }
 
+.navbar-brand {
+  color: $secondary-color; // Color para el enlace "Inicio"
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  color: lighten($secondary-color, 10%); // Color más claro al pasar el mouse
+}
+
+.nav-link {
+  color: #333; // Color de los enlaces por defecto
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: darken($secondary-color, 10%); // Color más oscuro al pasar el mouse
+}
+
+.dropdown-menu {
+  background-color: red; // Fondo del dropdown
+}
+
+.dropdown-item {
+  color: #000000; // Color de los elementos del dropdown
+}
+
+.dropdown-item:hover {
+  background-color: lighten($secondary-color, 10%); // Efecto hover
+}
+
+.nav-item:nth-child(1) .nav-link {
+  color: #ff6347; // Color personalizado para "Nuestra historia"
+}
+
+.nav-item:nth-child(2) .nav-link {
+  color: #4682b4; // Color personalizado para "Contactos"
+}
+
+.nav-item:nth-child(3) .nav-link {
+  color: #32cd32; // Color personalizado para "Productos"
+}
+
+.nav-item:nth-child(4) .nav-link {
+  color: #ff4500; // Color personalizado para "Trabaje con nosotros"
+}
+
+.btn-outline-success {
+  background-color: red !important;
+  color: #fff;
+}
+
+.btn-outline-success:hover {
+  background-color: lighten($primary-color, 15%); // Color más claro en hover
+}
+
+
+//IMG INDEX
 .image-gallery {
   display: flex;
   justify-content: center;
