@@ -180,30 +180,11 @@ header {
 }
 
 /* Global styles */
-html, body {
-  height: 100%; /* Asegura que el html y body ocupen toda la altura de la pantalla */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column; /* Organiza todo el contenido en una columna vertical */
-}
-
-body {
-  min-height: 100vh; /* Asegura que el body ocupe al menos la ventana completa */
-}
-
-main {
-  flex: 1; /* Hace que el contenido principal empuje el footer hacia abajo si hay poco contenido */
-}
-
 .footer-global {
-  position: relative; /* Asegura que el footer esté dentro del flujo del documento */
-  width: 100%; /* El footer ocupa todo el ancho */
   background-color: rgba(13, 1, 41, 0.6235294118); /* Color de fondo */
   color: white; /* Color del texto */
   padding: 20px 0; /* Espacio dentro del footer */
   text-align: center; /* Centra el contenido del footer */
-  margin-top: auto; /* Empuja el footer hacia abajo si hay poco contenido */
 }
 .footer-global .footer-content {
   display: flex;
