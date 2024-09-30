@@ -315,15 +315,43 @@ header {
   position: relative;
 }
 
+.TextoMid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 .div-texto2 {
-  background-color: antiquewhite;
-  color: black;
+  background-color: #faf3e0; /* Un tono más suave de crema para darle un look elegante */
+  color: #333; /* Un tono gris oscuro para suavizar el contraste con el fondo */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 20px;
-  width: 50%;
+  padding: 30px; /* Más espacio alrededor del contenido */
+  width: 60%; /* Un poco más ancho para darle más espacio al contenido */
+  margin: 20px auto; /* Centrar el contenedor con margen superior e inferior */
+  border-radius: 10px; /* Bordes redondeados para suavizar el diseño */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+  font-family: "Poppins", sans-serif; /* Fuente moderna y limpia */
+  font-size: 1.1em; /* Tamaño de letra ligeramente más grande */
+  line-height: 1.6; /* Espacio entre líneas para mejorar la legibilidad */
+  text-align: center; /* Centramos el texto para darle un aspecto equilibrado */
+}
+
+.div-texto2 h1, .div-texto2 p {
+  margin: 10px 0; /* Espaciado entre encabezados y párrafos */
+}
+
+.div-texto2 a {
+  color: #007BFF; /* Color de enlace más llamativo */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: bold; /* Enlaces con un poco más de peso */
+}
+
+.div-texto2 a:hover {
+  text-decoration: underline; /* Subrayado al pasar el cursor para mejor interacción */
 }
 
 .contactosMain {
