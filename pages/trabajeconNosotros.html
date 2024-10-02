@@ -57,25 +57,55 @@
         <div class="sideLeft">
           <h2>Trabaje con nosotros</h2>
           <form action="#" method="" class="row g-3">
-            <div class="col-auto">
-              <label for="Nombre" class="visually-hidden">Nombre</label>
+  
+            <div class="col-md-6">
+              <label for="Nombre" class="form-label">Nombre</label>
               <input type="text" class="form-control" id="Nombre" placeholder="Nombre" name="Nombre">
             </div>
-            <div class="col-auto">
-              <label for="Apellido" class="visually-hidden">Apellido</label>
+            <div class="col-md-6">
+              <label for="Apellido" class="form-label">Apellido</label>
               <input type="text" class="form-control" id="Apellido" placeholder="Apellido" name="Apellido">
             </div>
-            <div class="col-auto">
-              <label for="gmail" class="visually-hidden">Email</label>
+            
+            <div class="col-md-6">
+              <label for="gmail" class="form-label">Email</label>
               <input type="email" class="form-control" id="gmail" placeholder="name@example.com" name="Mail">
             </div>
-            <div class="col-auto">
-              <label for="Telefono" class="visually-hidden">Teléfono</label>
+            <div class="col-md-6">
+              <label for="Telefono" class="form-label">Teléfono</label>
               <input type="text" class="form-control" id="Telefono" placeholder="Teléfono" name="Telefono">
             </div>
-            <div class="col-auto">
-              <label for="mensaje" class="visually-hidden">Mensaje</label>
+            
+            <div class="col-md-4">
+              <label for="Pais" class="form-label">País</label>
+              <input type="text" class="form-control" id="Pais" placeholder="País" name="Pais">
+            </div>
+            <div class="col-md-4">
+              <label for="Empresa" class="form-label">Empresa</label>
+              <input type="text" class="form-control" id="Empresa" placeholder="Empresa" name="Empresa">
+            </div>
+            <div class="col-md-4">
+              <label for="Cargo" class="form-label">Cargo</label>
+              <input type="text" class="form-control" id="Cargo" placeholder="Cargo" name="Cargo">
+            </div>
+            
+            <div class="col-md-6">
+              <label for="Industria" class="form-label">Industria</label>
+              <input type="text" class="form-control" id="Industria" placeholder="Industria" name="Industria">
+            </div>
+            
+            <div class="col-md-12">
+              <label for="mensaje" class="form-label">Mensaje</label>
               <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribinos tu mensaje" name="mensaje"></textarea>
+            </div>
+                         <!-- Checkbox para aceptar términos o condiciones -->
+            <div class="col-md-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+                <label class="form-check-label" for="termsCheck">
+                  Acepto los términos y condiciones
+                </label>
+              </div>
             </div>
             <div class="col-auto">
               <button type="submit" class="btn btn-primary mb-3">Enviar</button>
@@ -83,27 +113,31 @@
             <div class="col-auto">
               <button type="reset" class="btn btn-outline-secondary mb-3">Resetear</button>
             </div>
+          
+ 
           </form>
+          
         </div>
   
         <!-- Lado Derecho -->
         <div class="sideRight">
+          <h3>Mas informacion</h3>
             <div class="info-block">
-              <h3>Información adicional</h3>
-              <p>Aquí puedes agregar información relevante, enlaces o imágenes adicionales.</p>
-              <img src="../assets/1328396.png" alt="Imagen informativa" class="img-fluid" />
+              <img src="../assets/sddefault.jpg" alt="Imagen informativa" class="img-fluid" />
+              <div class="textContents">
+              <h3>Nuestros productos</h3>
+              <p>Ver mas</p>  
+              </div>
             </div>
           
             <div class="info-block">
-              <h3>Otro contenido</h3>
-              <p>Descripción o texto del segundo bloque.</p>
+              <img src="../assets/156970.jpg" alt="">
+              <div class="textContents">
+                <h3>Nuestros sucursales</h3>
+              <p>Ver mas</p>
+              </div>
             </div>
-          
-            <div class="info-block">
-              <h3>Más contenido</h3>
-              <p>Descripción o texto del tercer bloque.</p>
-            </div>
-          </div>
+        </div>
           
     </section>
   </main>

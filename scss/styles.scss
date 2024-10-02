@@ -568,10 +568,10 @@ button[type="reset"]:hover {
 .sideRight {
   display: flex;
   flex-direction: column; /* Coloca los bloques uno debajo del otro */
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 300px; /* Ajusta el ancho para no ocupar mucho espacio */
+  //max-width: 300px; /* Ajusta el ancho para no ocupar mucho espacio */
   background-color: #f8f9fa;
   padding: 20px;
   border-radius: 10px;
@@ -581,17 +581,28 @@ button[type="reset"]:hover {
 
 /* Estilo para cada bloque dentro de sideRight */
 .info-block {
-  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  background-color: red;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: start;
+  text-align: center;
 }
 
 /* Estilo para las imágenes dentro de los bloques */
 .info-block img {
-  
   height: auto;
   border-radius: 8px;
   margin-top: 10px;
 }
+
+.info-block .textContents{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
