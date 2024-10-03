@@ -1,0 +1,59 @@
+// Menú hamburguesa en responsive
+@media (max-width: 320px) {
+    .nav-menu {
+      display: none; // Ocultar el menú en pantallas pequeñas
+    }
+  
+    .navbar-toggler {
+      display: block; // Mostrar el botón del menú hamburguesa en pantallas pequeñas
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 10;
+    }
+  
+    .offcanvas {
+      background-color: $primary-color;
+      color: $secondary-color;
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          margin: 10px 0;
+          a {
+            color: $secondary-color;
+            text-decoration: none;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  
+  // Ajustes para pantallas pequeñas
+  @media (max-width: 768px) {
+    .carousel {
+      height: auto;
+    }
+  
+    .subtitle-container {
+      margin-top: -10px; // Ajustar el subtítulo más cerca en pantallas pequeñas
+    }
+  }
+  
+
+  /* Responsiveness */
+@media (max-width: 320px) {
+    header, ul, h1, .banner, main {
+      @include flexbox(column, center);
+    }
+  
+    .image-gallery {
+      flex-direction: column;
+    }
+  
+    .footer-global {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }

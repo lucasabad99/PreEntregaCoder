@@ -9,6 +9,82 @@ header {
   position: relative;
 }
 
+/* Global styles */
+.footer-global {
+  background-color: rgba(13, 1, 41, 0.6235294118); /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 20px 0; /* Espacio dentro del footer */
+  text-align: center; /* Centra el contenido del footer */
+}
+.footer-global .footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-global .footer-content div {
+  flex: 1;
+  max-width: 200px;
+}
+.footer-global .footer-content .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.footer-global .footer-content .social-icons a, .footer-global .footer-content .social-icons i {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s;
+}
+.footer-global .footer-content .social-icons a:hover {
+  color: #007bff;
+}
+.footer-global .footer-content p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.contactosMain {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px auto;
+  width: 90%;
+}
+
+.left-side, .TextoContacto {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  border: 0;
+}
+
+.jefes {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.TextoContacto img {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 320px) {
   .nav-menu {
     display: none;
@@ -45,6 +121,254 @@ header {
     margin-top: -10px;
   }
 }
+/* Responsiveness */
+@media (max-width: 320px) {
+  header, ul, h1, .banner, main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .image-gallery {
+    flex-direction: column;
+  }
+  .footer-global {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+.mainHistory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-texto1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  position: relative;
+}
+
+.TextoMid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.div-texto2 {
+  background-color: #faf3e0; /* Un tono más suave de crema para darle un look elegante */
+  color: #333; /* Un tono gris oscuro para suavizar el contraste con el fondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px; /* Más espacio alrededor del contenido */
+  width: 60%; /* Un poco más ancho para darle más espacio al contenido */
+  margin: 20px auto; /* Centrar el contenedor con margen superior e inferior */
+  border-radius: 10px; /* Bordes redondeados para suavizar el diseño */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+  font-family: "Poppins", sans-serif; /* Fuente moderna y limpia */
+  font-size: 1.1em; /* Tamaño de letra ligeramente más grande */
+  line-height: 1.6; /* Espacio entre líneas para mejorar la legibilidad */
+  text-align: center; /* Centramos el texto para darle un aspecto equilibrado */
+}
+
+.div-texto2 h1, .div-texto2 p {
+  margin: 10px 0; /* Espaciado entre encabezados y párrafos */
+}
+
+.div-texto2 a {
+  color: #007BFF; /* Color de enlace más llamativo */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: bold; /* Enlaces con un poco más de peso */
+}
+
+.div-texto2 a:hover {
+  text-decoration: underline; /* Subrayado al pasar el cursor para mejor interacción */
+}
+
+.EtiquetaImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* O center si querés centrar los textos */
+  width: 100%;
+  margin-top: 0px; /* Espacio entre la imagen y los textos */
+  gap: 5px; /* Espacio entre las líneas de texto */
+  background-color: rgba(255, 208, 0, 0.856); /* Color de fondo para destacar la etiqueta */
+}
+.EtiquetaImg p {
+  margin: 0;
+  font-size: 14px; /* Tamaño de fuente uniforme */
+  color: #333; /* Color del texto */
+}
+.EtiquetaImg p:first-of-type {
+  font-size: 18px; /* Tamaño más grande para el precio */
+  font-weight: bold; /* Resalta el precio */
+  color: rgba(3, 31, 82, 0.938); /* Un color diferente para el precio */
+}
+.EtiquetaImg p:nth-of-type(2) {
+  font-weight: 600; /* Resalta el nombre del producto */
+}
+.EtiquetaImg p:nth-of-type(3) {
+  font-style: italic; /* Opcional: estilo diferente para la categoría */
+}
+
+.main-productos {
+  padding: 20px;
+  min-height: 120px;
+}
+
+.productos-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.img-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(25% - 20px);
+  max-width: 250px;
+  text-align: center;
+}
+
+.producto-img {
+  width: 100%;
+  height: 250px; /* Ajusta la altura de las imágenes */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.producto p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Contenedor para ambos lados */
+.container-sides {
+  display: flex;
+  justify-content: center; /* Centra ambos lados en la página */
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 20px;
+  gap: 30px; /* Espacio entre los dos lados */
+}
+
+/* Lado izquierdo (Formulario) */
+.sideLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos del formulario */
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 600px; /* Ajusta el ancho del formulario */
+  background-color: #f8f9fa; /* Fondo claro */
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.sideLeft .col-auto {
+  width: 100%; /* Los inputs ocupan todo el ancho del contenedor */
+  margin-bottom: 15px; /* Espacio entre cada input */
+}
+
+.form-control {
+  width: 100%; /* Input ocupa todo el ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ced4da; /* Borde */
+  border-radius: 5px;
+}
+
+/* Botones */
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button[type=submit] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button[type=submit]:hover {
+  background-color: #0056b3;
+}
+
+button[type=reset] {
+  background-color: transparent;
+  border: 2px solid #6c757d;
+  color: #6c757d;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button[type=reset]:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Lado derecho */
+/* Estilos para el contenedor principal sideRight */
+.sideRight {
+  display: flex;
+  flex-direction: column; /* Coloca los bloques uno debajo del otro */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 20px; /* Espacio entre los bloques */
+}
+
+/* Estilo para cada bloque dentro de sideRight */
+.info-block {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  background-color: red;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Estilo para las imágenes dentro de los bloques */
+.info-block img {
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.info-block .textContents {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .banner {
   display: flex;
   flex-direction: column;
@@ -177,330 +501,6 @@ header {
   margin-top: 5px;
   font-size: 1rem;
   color: #666;
-}
-
-/* Global styles */
-.footer-global {
-  background-color: rgba(13, 1, 41, 0.6235294118); /* Color de fondo */
-  color: white; /* Color del texto */
-  padding: 20px 0; /* Espacio dentro del footer */
-  text-align: center; /* Centra el contenido del footer */
-}
-.footer-global .footer-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.footer-global .footer-content div {
-  flex: 1;
-  max-width: 200px;
-}
-.footer-global .footer-content .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
-.footer-global .footer-content .social-icons a, .footer-global .footer-content .social-icons i {
-  font-size: 24px;
-  color: #333;
-  transition: color 0.3s;
-}
-.footer-global .footer-content .social-icons a:hover {
-  color: #007bff;
-}
-.footer-global .footer-content p {
-  margin: 0;
-  padding: 5px 0;
-}
-
-.main-productos {
-  padding: 20px;
-  min-height: 120px;
-}
-
-.productos-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.img-productos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.producto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: calc(25% - 20px);
-  max-width: 250px;
-  text-align: center;
-}
-
-.producto-img {
-  width: 100%;
-  height: 250px; /* Ajusta la altura de las imágenes */
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.producto p {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #333;
-}
-
-.EtiquetaImg {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* O center si querés centrar los textos */
-  width: 100%;
-  margin-top: 0px; /* Espacio entre la imagen y los textos */
-  gap: 5px; /* Espacio entre las líneas de texto */
-  background-color: rgba(255, 208, 0, 0.856); /* Color de fondo para destacar la etiqueta */
-}
-.EtiquetaImg p {
-  margin: 0;
-  font-size: 14px; /* Tamaño de fuente uniforme */
-  color: #333; /* Color del texto */
-}
-.EtiquetaImg p:first-of-type {
-  font-size: 18px; /* Tamaño más grande para el precio */
-  font-weight: bold; /* Resalta el precio */
-  color: rgba(3, 31, 82, 0.938); /* Un color diferente para el precio */
-}
-.EtiquetaImg p:nth-of-type(2) {
-  font-weight: 600; /* Resalta el nombre del producto */
-}
-.EtiquetaImg p:nth-of-type(3) {
-  font-style: italic; /* Opcional: estilo diferente para la categoría */
-}
-
-/* Responsiveness */
-@media (max-width: 320px) {
-  header, ul, h1, .banner, main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-  }
-  .image-gallery {
-    flex-direction: column;
-  }
-  .footer-global {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
-.mainHistory {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.div-texto1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  position: relative;
-}
-
-.TextoMid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.div-texto2 {
-  background-color: #faf3e0; /* Un tono más suave de crema para darle un look elegante */
-  color: #333; /* Un tono gris oscuro para suavizar el contraste con el fondo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 30px; /* Más espacio alrededor del contenido */
-  width: 60%; /* Un poco más ancho para darle más espacio al contenido */
-  margin: 20px auto; /* Centrar el contenedor con margen superior e inferior */
-  border-radius: 10px; /* Bordes redondeados para suavizar el diseño */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
-  font-family: "Poppins", sans-serif; /* Fuente moderna y limpia */
-  font-size: 1.1em; /* Tamaño de letra ligeramente más grande */
-  line-height: 1.6; /* Espacio entre líneas para mejorar la legibilidad */
-  text-align: center; /* Centramos el texto para darle un aspecto equilibrado */
-}
-
-.div-texto2 h1, .div-texto2 p {
-  margin: 10px 0; /* Espaciado entre encabezados y párrafos */
-}
-
-.div-texto2 a {
-  color: #007BFF; /* Color de enlace más llamativo */
-  text-decoration: none; /* Sin subrayado */
-  font-weight: bold; /* Enlaces con un poco más de peso */
-}
-
-.div-texto2 a:hover {
-  text-decoration: underline; /* Subrayado al pasar el cursor para mejor interacción */
-}
-
-.contactosMain {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  margin: 40px auto;
-  width: 90%;
-}
-
-.left-side, .TextoContacto {
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 50%;
-}
-
-.mapa iframe {
-  width: 100%;
-  height: 350px;
-  border-radius: 12px;
-  border: 0;
-}
-
-.jefes {
-  margin-top: 20px;
-  background-color: #007bff;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.TextoContacto img {
-  margin-top: 20px;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Contenedor para ambos lados */
-.container-sides {
-  display: flex;
-  justify-content: center; /* Centra ambos lados en la página */
-  align-items: flex-start; /* Alinea los elementos en la parte superior */
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  margin: 0 auto; /* Centra el contenedor */
-  padding: 20px;
-  gap: 30px; /* Espacio entre los dos lados */
-}
-
-/* Lado izquierdo (Formulario) */
-.sideLeft {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra los elementos del formulario */
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 600px; /* Ajusta el ancho del formulario */
-  background-color: #f8f9fa; /* Fondo claro */
-  padding: 20px;
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-}
-
-.sideLeft .col-auto {
-  width: 100%; /* Los inputs ocupan todo el ancho del contenedor */
-  margin-bottom: 15px; /* Espacio entre cada input */
-}
-
-.form-control {
-  width: 100%; /* Input ocupa todo el ancho del contenedor */
-  padding: 10px; /* Espaciado interno */
-  border: 1px solid #ced4da; /* Borde */
-  border-radius: 5px;
-}
-
-/* Botones */
-button {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-}
-
-button[type=submit] {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-button[type=submit]:hover {
-  background-color: #0056b3;
-}
-
-button[type=reset] {
-  background-color: transparent;
-  border: 2px solid #6c757d;
-  color: #6c757d;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button[type=reset]:hover {
-  background-color: #6c757d;
-  color: white;
-}
-
-/* Lado derecho */
-/* Estilos para el contenedor principal sideRight */
-.sideRight {
-  display: flex;
-  flex-direction: column; /* Coloca los bloques uno debajo del otro */
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  gap: 20px; /* Espacio entre los bloques */
-}
-
-/* Estilo para cada bloque dentro de sideRight */
-.info-block {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  width: 100%;
-  background-color: red;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* Estilo para las imágenes dentro de los bloques */
-.info-block img {
-  height: auto;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-.info-block .textContents {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
 /*# sourceMappingURL=styles.css.map */

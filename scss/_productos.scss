@@ -1,0 +1,80 @@
+//Productos BOCA
+.EtiquetaImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* O center si querés centrar los textos */
+    width: 100%;
+    margin-top: 0px; /* Espacio entre la imagen y los textos */
+    //padding: 10px; /* Añade algo de espacio interno */
+    gap: 5px; /* Espacio entre las líneas de texto */
+    background-color: rgba(255, 208, 0, 0.856); /* Color de fondo para destacar la etiqueta */
+    //border-radius: 8px; /* Bordes redondeados */
+    //box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para hacer que se destaque */
+  
+    p {
+      margin: 0;
+      font-size: 14px; /* Tamaño de fuente uniforme */
+      color: #333; /* Color del texto */
+    }
+  
+    p:first-of-type {
+      font-size: 18px; /* Tamaño más grande para el precio */
+      font-weight: bold; /* Resalta el precio */
+      color: rgba(3, 31, 82, 0.938); /* Un color diferente para el precio */
+    }
+  
+    p:nth-of-type(2) {
+      font-weight: 600; /* Resalta el nombre del producto */
+    }
+  
+    p:nth-of-type(3) {
+      font-style: italic; /* Opcional: estilo diferente para la categoría */
+    }
+  }
+
+  //PRODUCTOS
+.main-productos {
+  padding: 20px;
+  min-height: 120px
+}
+
+
+.productos-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.img-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(25% - 20px);
+  max-width: 250px;
+  text-align: center;
+}
+
+.producto-img {
+  width: 100%;
+  height: 250px; /* Ajusta la altura de las imágenes */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  
+}
+
+
+.producto p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}

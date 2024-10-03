@@ -1,0 +1,111 @@
+//TRABAJE CON NOSOTROS
+/* Contenedor para ambos lados */
+.container-sides {
+    display: flex;
+    justify-content: center; /* Centra ambos lados en la página */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px;
+    gap: 30px; /* Espacio entre los dos lados */
+  }
+  
+  /* Lado izquierdo (Formulario) */
+  .sideLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos del formulario */
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho del formulario */
+    background-color: #f8f9fa; /* Fondo claro */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  .sideLeft .col-auto {
+    width: 100%; /* Los inputs ocupan todo el ancho del contenedor */
+    margin-bottom: 15px; /* Espacio entre cada input */
+  }
+  
+  .form-control {
+    width: 100%; /* Input ocupa todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ced4da; /* Borde */
+    border-radius: 5px;
+  }
+  
+  /* Botones */
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  button[type="reset"] {
+    background-color: transparent;
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  button[type="reset"]:hover {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  /* Lado derecho */
+  /* Estilos para el contenedor principal sideRight */
+  .sideRight {
+    display: flex;
+    flex-direction: column; /* Coloca los bloques uno debajo del otro */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    //max-width: 300px; /* Ajusta el ancho para no ocupar mucho espacio */
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Espacio entre los bloques */
+  }
+  
+  /* Estilo para cada bloque dentro de sideRight */
+  .info-block {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    background-color: red;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Estilo para las imágenes dentro de los bloques */
+  .info-block img {
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .info-block .textContents{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
