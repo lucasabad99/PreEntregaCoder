@@ -1,0 +1,78 @@
+// Variables de colores y fuentes
+$colores: rgb(21, 21, 124), white, #0d01299f, white, #333, #666, #ff6347, #4682b4, #32cd32, #ff4500, red, #007bff, #faf3e0, rgba(255, 208, 0, 0.856), rgba(3, 31, 82, 0.938), #f8f9fa, #6c757d, #ced4da, #0056b3;
+$fuentes: Arial, sans-serif, 'Poppins', sans-serif;
+
+//Extends
+%flexcenterstar{
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+}
+%flexcolumncenter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+%flexrowcenter{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+//mixings
+//Tiene la misma logica que Extends
+@mixin flexcenterrow($justify, $direction){ 
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction; 
+}
+@mixin flexcenterrowes($justify,$flex,$align){ 
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $flex; 
+    align-items: $align;
+  }
+  
+// mixing con parametros
+@mixin sizes($ancho, $alto, $radius, $borde){
+  width: $ancho;
+  height: $alto;
+  border-radius: $radius;
+  border: $borde;
+}
+
+@mixin size($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+  }
+
+  @mixin flexgapjustify($flex,$gap,$justify) {
+    display: flex;
+    flex-wrap: $flex;
+    gap: $gap;
+    justify-content: $justify;
+  }
+ 
+/* Mixin para flexbox */
+@mixin flexbox($direction, $justify, $align, $wrap, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+@mixin flexboxs($direction, $justify){
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+/* Mixin para flexbox */
+@mixin flexboxess($direction,$align) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+  }
+  

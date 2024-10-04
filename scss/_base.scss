@@ -1,73 +1,46 @@
-/* Variables */
-$primary-color: rgb(21, 21, 124);
-$secondary-color: white;
-$footer-bg: #0d01299f;
-$footer-text-color: white;
-$font-main: Arial, sans-serif;
-
-/* Mixin para flexbox */
-@mixin flexbox($direction: row, $justify: flex-start, $align: stretch) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-
 /* INDEX */
 // Estilos generales para el header
 header {
-    background-color: $primary-color;
-    color: $secondary-color;
-    padding: 10px 20px;
-    position: relative; // Para manejar la posición del menú correctamente
-  }
+  // Uso de listas para colores
+  background-color: nth($colores, 1);
+  color: nth($colores, 2); // Usamos el color blanco para el texto
+  font-family: nth($fuentes, 1); // Uso de la lista de fuentes
+  padding: 10px 20px;
+  position: relative; // Para manejar la posición del menú correctamente
+}
 
-  /* Global styles */
-
+/* Global styles */
 .footer-global {
-    //position: relative; /* Asegura que el footer esté dentro del flujo del documento */
-    //width: 100%; /* El footer ocupa todo el ancho */
-    background-color: $footer-bg; /* Color de fondo */
-    color: $footer-text-color; /* Color del texto */
-    padding: 20px 0; /* Espacio dentro del footer */
-    text-align: center; /* Centra el contenido del footer */
-    //margin-top: auto; /* Empuja el footer hacia abajo si hay poco contenido */
-  
-    
-    
-    .footer-content {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-  
-      div {
-        flex: 1;
-        max-width: 200px;
+  background-color: nth($colores, 3); /* Color de fondo */
+  color: nth($colores, 4); /* Color del texto (blanco) */
+  font-family: nth($fuentes, 1); // Uso de la lista de fuentes
+  padding: 20px 0; /* Espacio dentro del footer */
+  text-align: center; /* Centra el contenido del footer */
+
+  .footer-content {
+    @include flexbox(row, space-around, center, wrap, 20px); /* Usamos el mixin de flexbox */
+    div {
+      flex: 1;
+      max-width: 200px;
+    }
+
+    .social-icons {
+      @include flexbox(row, center, stretch, nowrap, 5px); /* Usamos el mixin de flexbox */
+
+      a, i {
+        font-size: 24px;
+        color: #333;
+        transition: color 0.3s;
       }
-  
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-  
-        a, i {
-          font-size: 24px;
-          color: #333;
-          transition: color 0.3s;
-        }
-  
-        a:hover {
-          color: #007bff;
-        }
-      }
-  
-      p {
-        margin: 0;
-        padding: 5px 0;
+
+      a:hover {
+        color: #007bff;
       }
     }
+
+    p {
+      margin: 0;
+      padding: 5px 0;
+    }
   }
-  
+}

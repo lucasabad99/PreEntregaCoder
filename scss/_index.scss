@@ -1,143 +1,136 @@
 // CAROUSEL INDEX
 .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend%flexcolumncenter;
     margin-bottom: 0;
     padding: 0;
-  }
-  
-  .carousel {
-    width: 100%;
-    height: auto; // Dejar que se ajuste automáticamente
+}
+
+.carousel {
+    @include size(100%,auto);
     overflow: hidden;
     margin: 0;
     padding: 0;
-  
+
     .carousel-inner img {
-      width: 100%;
-      height: auto; // Ajustamos la altura automáticamente
-      object-fit: cover;
-      max-width: 100%;
+      @include size(100%,auto);
+        object-fit: cover;
+        max-width: 100%;
     }
-  }
-  
-  .subtitle-container {
+}
+
+.subtitle-container {
     text-align: center;
     width: 100%;
-   // padding: 10px;
     margin-top: -5px; // Pegar el subtítulo al carrusel
     margin-bottom: 0;
-  
+
     p {
-      color: white;
-      margin: 0;
-      font-size: 24px;
-      background-color: $primary-color;
+        color: nth($colores, 2); // Color blanco
+        margin: 0;
+        font-size: 24px;
+        background-color: nth($colores, 1); // Color primario (azul oscuro)
     }
-  }
-  
-  //NAV INDEX
-  
-  .navAlineado{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .navbar {
-    background-color: rgb(21, 21, 124) !important; // Cambia el color de fondo del menú
-  }
-  
+}
+
+// NAV INDEX
+
+.navAlineado {
+  @extend %flexrowcenter;
+}
+
+.navbar {
+  background-color: nth($colores, 1) !important; // Color primario (azul oscuro)
+
   .navbar-brand {
-    color: $secondary-color; // Color para el enlace "Inicio"
-    font-weight: bold;
+      color: nth($colores, 2); // Color secundario (blanco)
+      font-weight: bold;
+
+      &:hover {
+          color: lighten(nth($colores, 2), 10%); // Color más claro al pasar el mouse
+      }
   }
-  
-  .navbar-brand:hover {
-    color: lighten($secondary-color, 10%); // Color más claro al pasar el mouse
-  }
-  
+
   .nav-link {
-    color: #333; // Color de los enlaces por defecto
-    font-weight: 500;
+      color: nth($colores, 5); // Color gris oscuro (#333)
+      font-weight: 500;
+
+      &:hover {
+          color: darken(nth($colores, 2), 10%); // Color más oscuro al pasar el mouse
+      }
   }
-  
-  .nav-link:hover {
-    color: darken($secondary-color, 10%); // Color más oscuro al pasar el mouse
-  }
-  
+
   .dropdown-menu {
-    background-color: red; // Fondo del dropdown
+      background-color: nth($colores, 11); // Fondo rojo
+
+      .dropdown-item {
+          color: nth($colores, 2); // Color negro
+
+          &:hover {
+              background-color: lighten(nth($colores, 2), 10%); // Efecto hover
+          }
+      }
   }
-  
-  .dropdown-item {
-    color: #000000; // Color de los elementos del dropdown
+
+  .nav-item {
+      &:nth-child(1) .nav-link {
+          color: nth($colores, 7); // Color personalizado para "Nuestra historia" (#ff6347)
+      }
+
+      &:nth-child(2) .nav-link {
+          color: nth($colores, 8); // Color personalizado para "Contactos" (#4682b4)
+      }
+
+      &:nth-child(3) .nav-link {
+          color: nth($colores, 9); // Color personalizado para "Productos" (#32cd32)
+      }
+
+      &:nth-child(4) .nav-link {
+          color: nth($colores, 10); // Color personalizado para "Trabaje con nosotros" (#ff4500)
+      }
   }
-  
-  .dropdown-item:hover {
-    background-color: lighten($secondary-color, 10%); // Efecto hover
-  }
-  
-  .nav-item:nth-child(1) .nav-link {
-    color: #ff6347; // Color personalizado para "Nuestra historia"
-  }
-  
-  .nav-item:nth-child(2) .nav-link {
-    color: #4682b4; // Color personalizado para "Contactos"
-  }
-  
-  .nav-item:nth-child(3) .nav-link {
-    color: #32cd32; // Color personalizado para "Productos"
-  }
-  
-  .nav-item:nth-child(4) .nav-link {
-    color: #ff4500; // Color personalizado para "Trabaje con nosotros"
-  }
-  
+
   .btn-outline-success {
-    background-color: red !important;
-    color: #fff;
+      background-color: nth($colores, 11) !important; // Color rojo
+      color: nth($colores, 2); // Color blanco
+
+      &:hover {
+          background-color: lighten(nth($colores, 1), 15%); // Color más claro en hover
+      }
   }
-  
-  .btn-outline-success:hover {
-    background-color: lighten($primary-color, 15%); // Color más claro en hover
-  }
-  
-  
-  //IMG INDEX
-  .image-gallery {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+}
+
+
+// IMG INDEX
+.image-gallery {
+    @include flexcenterrow(center, row);
     gap: 20px;
     padding: 20px;
-  }
-  
-  .image-box {
+}
+
+.image-box {
     width: 300px;
     text-align: center; // Centrar el texto debajo de la imagen
-  
+
     .gallery-image {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      @include size(100%,400px);
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-  
+
     .image-caption {
-      margin-top: 10px; // Separar un poco el texto de la imagen
-      h3 {
-        margin: 0;
-        font-size: 1.2rem;
-        color: #333;
-      }
-  
-      p {
-        margin-top: 5px;
-        font-size: 1rem;
-        color: #666;
-      }
+        margin-top: 10px; // Separar un poco el texto de la imagen
+
+        h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: nth($colores, 5); // Color gris oscuro (#333)
+        }
+
+        p {
+            margin-top: 5px;
+            font-size: 1rem;
+            color: nth($colores, 6); // Color gris claro (#666)
+        }
     }
-  }
+}
