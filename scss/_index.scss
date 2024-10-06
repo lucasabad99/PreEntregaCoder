@@ -154,7 +154,7 @@
   }
   
   // Media queries para pantallas pequeñas
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 480px) {
     .image-gallery {
       flex-direction: column; // Cambiar a columna en pantallas pequeñas
       align-items: center;

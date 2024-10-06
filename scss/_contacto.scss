@@ -69,7 +69,7 @@
 }
 
 // Media queries para pantallas pequeñas
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
     .contactosMain {
         flex-direction: column; // Cambiar el layout a columna en pantallas pequeñas
         align-items: center; // Alinear los elementos al centro

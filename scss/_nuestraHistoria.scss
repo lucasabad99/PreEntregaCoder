@@ -44,7 +44,7 @@
 }
 
 // Media queries para ajustar en pantallas pequeñas
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
     .mainHistory img {
         max-width: 100%; // Imagen ocupa el 100% en pantallas pequeñas
     }
@@ -56,7 +56,7 @@
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
     .div-texto2 {
         width: 100%; // Ocupa el 100% en móviles
         padding: 10px; // Menos padding en móviles
