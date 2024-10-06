@@ -1,61 +1,92 @@
-/* Menú hamburguesa en responsive */
-@media (max-width: 320px) {
-    .nav-menu {
-      display: none; // Ocultar el menú en pantallas pequeñas
+// Media queries para pantallas pequeñas
+@media only screen and (max-width: 320px) {
+
+  // Ajustes generales para el header
+  header {
+    padding: 5px 10px;
+    h1 {
+      font-size: 1.5rem;
     }
-
-    .navbar-toggler {
-      display: block; // Mostrar el botón del menú hamburguesa en pantallas pequeñas
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      z-index: 10;
-    }
-
-    .offcanvas {
-      background-color: nth($colores, 1); // Color primario (azul oscuro)
-      color: nth($colores, 2); // Color secundario (blanco)
-
-      ul {
-        list-style: none;
-        padding: 0;
-
-        li {
-          margin: 10px 0;
-
-          a {
-            color: nth($colores, 2); // Color secundario (blanco)
-            text-decoration: none;
-            font-size: 1.2rem;
-          }
-        }
+    nav {
+      .navbar-brand {
+        font-size: 1rem;
       }
     }
-}
+  }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-    .carousel {
+  // Ajustes del carrusel
+  .carousel {
+    img {
       height: auto;
+      max-height: 200px; // Ajusta la altura de las imágenes del carrusel
+    }
+  }
+
+  // Ajustes del banner
+  .subtitle-container {
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  // Ajustes de la galería de imágenes
+  .image-gallery {
+    flex-direction: column; // Cambiamos la disposición a columna
+    align-items: center; // Centramos las imágenes en la columna
+  }
+
+  .image-box {
+    width: 100%; // Las imágenes ocupan todo el ancho disponible
+    max-width: 100%; // Para que ocupen el 100% en móvil
+    margin-bottom: 15px; // Espacio entre las imágenes
+  }
+
+  .gallery-image {
+    width: 100%; // Las imágenes se ajustan al 100% del ancho
+    height: auto; // Mantienen la proporción
+    max-height: 200px; // Tamaño máximo ajustado para pantallas pequeñas
+    object-fit: cover; // Para que la imagen no se deforme
+    border-radius: 10px;
+  }
+
+  // Ajustes para productos
+  .productos-section {
+    .img-productos {
+      display: flex;
+      flex-direction: column; // Cada producto en una fila
+      align-items: center;
+      gap: 10px;
     }
 
-    .subtitle-container {
-      margin-top: -10px; // Ajustar el subtítulo más cerca en pantallas pequeñas
+    .producto {
+      width: 100%; // Cada producto ocupa todo el ancho
+      max-width: none;
+      .producto-img {
+        width: 100%; // Ajustar la imagen al 100% del contenedor
+      }
     }
-}
+  }
 
-/* Responsiveness */
-@media (max-width: 320px) {
-    header, ul, h1, .banner, main {
-      @include flexboxs(column, center); // Usando el mixin de flexbox
+  // Ajustes para formularios (Trabaje con nosotros)
+  .container-sides {
+    flex-direction: column;
+    .sideLeft, .sideRight {
+      width: 100%; // Cada lado ocupa todo el ancho
     }
+  }
 
-    .image-gallery {
-      flex-direction: column;
+  // Footer
+  .footer-content {
+    flex-direction: column;
+    div {
+      text-align: center;
+      margin-bottom: 10px;
     }
-
-    .footer-global {
-      font-size: 14px;
-      padding: 10px;
+    .social-icons {
+      justify-content: center;
+      a {
+        margin: 0 5px;
+      }
     }
+  }
 }

@@ -17,7 +17,7 @@
     background-color: nth($colores, 16); /* Fondo claro (#f8f9fa) */
     padding: 20px;
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 4px 8px rgba(0, 124, 27, 0.1); /* Sombra */
 }
 
 .sideLeft .col-auto {
@@ -96,3 +96,38 @@ button[type="reset"]:hover {
 .info-block .textContents {
   @include flexcenterrow(center,column);
    }
+
+// Media queries para pantallas pequeñas
+@media only screen and (max-width: 768px) {
+  
+    /* Cambiar la disposición de los contenedores en pantallas pequeñas */
+    .container-sides {
+      flex-direction: column; // Apilar los contenedores uno debajo del otro
+      gap: 20px; // Añadir algo de espacio entre los contenedores
+    }
+  
+    /* Lado izquierdo y derecho ocupan el 100% del ancho en pantallas pequeñas */
+    .sideLeft, .sideRight {
+      width: 100%; // Ocupan todo el ancho
+      max-width: none; // Sin ancho máximo
+    }
+  
+    /* Dentro de sideRight, los bloques de info se apilan en columna */
+    .info-block {
+      flex-direction: column; // Apilar los elementos uno debajo del otro
+      text-align: left; // Cambia el alineado a la izquierda si lo prefieres
+    }
+  
+    /* Ajuste de las imágenes en pantallas pequeñas */
+    .info-block img {
+      width: 100%; // Las imágenes ocupan todo el ancho disponible
+      height: auto; // Mantener la proporción correcta
+      margin-top: 10px;
+    }
+  
+    /* El texto dentro de los bloques de información se ajusta */
+    .info-block .textContents {
+      margin-top: 10px;
+    }
+  }
+  
