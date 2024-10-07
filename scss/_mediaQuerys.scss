@@ -43,19 +43,25 @@
     border-radius: 10px;
   }
 
-  // Estilos para productos
-  .productos-section .img-productos {
-    @include fgjust(column, center, 10px);
-  }
+ // Estilos para productos
+.productos-section .img-productos {
+  @include fgjust(column, center, 10px);
+}
 
-  .producto {
-    width: 100%;
-    max-width: none;
-  }
+.producto {
+  width: 100%;
+  max-width: 250px; 
+  text-align: center;
+}
 
-  .producto-img {
-    width: 100%;
-  }
+.producto-img {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: 10px 10px 0 0;
+
+}
+
 
   // Estilo para formularios
   .container-sides {
@@ -92,7 +98,7 @@
 
   .left-side, .TextoContacto {
     width: 100%;
-    margin: 10px 31px;
+    margin: 10px auto;
   }
 
   .TextoContacto img {
@@ -110,7 +116,7 @@
   }
 
   .div-texto1 {
-    width: 90%;
+    width: 100%;
     padding: 15px;
     font-size: 0.9rem;
   }

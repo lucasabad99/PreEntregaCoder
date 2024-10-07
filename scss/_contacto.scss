@@ -1,9 +1,13 @@
 // CONTACTOS
 .contactosMain {
-    @extend %flexcenterstar;
-    gap: 40px;
-    width: 90%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%; 
     flex-wrap: wrap; // Permite que los elementos se envuelvan en pantallas pequeñas
+    padding: 0 20px; /* Añade 20px de espacio en ambos lados */
 }
 
 .left-side, .TextoContacto {
