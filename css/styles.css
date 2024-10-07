@@ -22,17 +22,21 @@
 /* Mixin para flexbox */
 /* INDEX */
 header {
-  background-color: rgb(21, 21, 124);
-  color: white;
+  background-color: #000814;
+  color: #faf3e0;
   font-family: Arial;
   padding: 10px 20px;
   position: relative;
 }
 
+main {
+  background-color: #001d3d;
+}
+
 /* Global styles */
 .footer-global {
-  background-color: rgba(13, 1, 41, 0.6235294118); /* Color de fondo */
-  color: white; /* Color del texto (blanco) */
+  background-color: #003566; /* Color de fondo */
+  color: #faf3e0; /* Color del texto (blanco) */
   font-family: Arial;
   padding: 20px 0; /* Espacio dentro del footer */
   text-align: center; /* Centra el contenido del footer */
@@ -72,6 +76,17 @@ header {
   padding: 5px 0;
 }
 
+/* This only changes this particular animation duration */
+.animate__animated.animate__slideInDown {
+  --animate-duration: 0.5s;
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
 .banner {
   margin-bottom: 0;
   padding: 0;
@@ -98,10 +113,10 @@ header {
   margin-bottom: 0;
 }
 .subtitle-container p {
-  color: white;
+  color: #000814;
   margin: 0;
   font-size: 24px;
-  background-color: rgb(21, 21, 124);
+  background-color: #ffc300;
 }
 
 .navbar-toggler {
@@ -118,7 +133,7 @@ header {
 }
 
 .navbar {
-  background-color: rgb(21, 21, 124) !important;
+  background-color: #000814 !important;
 }
 .navbar .navbar-brand {
   color: white;
@@ -135,29 +150,59 @@ header {
   color: #e6e6e6;
 }
 .navbar .dropdown-menu {
-  background-color: red;
+  background-color: #001d3d;
 }
 .navbar .dropdown-menu .dropdown-item {
   color: white;
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 .navbar .dropdown-menu .dropdown-item:hover {
-  background-color: white;
+  transform: scale(1.1);
 }
 .navbar .nav-item:nth-child(1) .nav-link {
-  color: white;
+  color: #faf3e0;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.navbar .nav-item:nth-child(1) .nav-link:hover {
+  transform: scale(1.1);
 }
 .navbar .nav-item:nth-child(2) .nav-link {
-  color: white;
+  color: #faf3e0;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.navbar .nav-item:nth-child(2) .nav-link:hover {
+  transform: scale(1.1);
 }
 .navbar .nav-item:nth-child(3) .nav-link {
-  color: white;
+  color: #faf3e0;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.navbar .nav-item:nth-child(3) .nav-link:hover {
+  transform: scale(1.1);
 }
 .navbar .nav-item:nth-child(4) .nav-link {
-  color: white !important;
+  color: #faf3e0 !important;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.navbar .nav-item:nth-child(4) .nav-link:hover {
+  transform: scale(1.1);
+}
+.navbar .nav-item:nth-child(5) .nav-link {
+  color: #faf3e0 !important;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.navbar .nav-item:nth-child(5) .nav-link:hover {
+  transform: scale(1.1);
 }
 .navbar .btn-outline-success {
-  background-color: red !important;
-  color: white;
+  background-color: #003566 !important;
+  color: #faf3e0 !important;
 }
 .navbar .btn-outline-success:hover {
   background-color: white;
@@ -189,65 +234,37 @@ header {
 .image-box .image-caption h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: #333;
+  color: #faf3e0;
 }
 .image-box .image-caption p {
   margin-top: 1px;
   font-size: 1rem;
-  color: #666;
+  color: #faf3e0;
 }
 
-@media only screen and (max-width: 768px) {
-  .image-gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-  .image-box {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-/*.contactosMain {
-    @extend%flexcenterstar;
-    gap: 40px; // Añade espacio entre los dos contenedores
-    margin: 40px auto; // Añade un margen superior e inferior, y centra la sección en el medio de la página
-    width: 90%; // Controla el ancho general del contenedor principal
-}
-.left-side, .TextoContacto {
-    background-color: nth($colores, 5); // Color de fondo claro para el contenedor (reemplazado #f8f9fa)
-    padding: 20px; // Espaciado interno dentro del contenedor
-    border-radius: 12px; // Bordes redondeados para suavizar las esquinas
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade una sombra sutil para dar un efecto elevado
-    width: 50%; // Ambos contenedores ocupan el 50% del ancho cada uno
-}
-.mapa iframe {
-    @include sizes(100%, 350px, 12px, 0); 
+/*  @media only screen and (max-width: 768px) {
+   .image-gallery {
+     flex-direction: column; // Cambiar a columna en pantallas pequeñas
+     align-items: center;
    }
 
-.jefes {
-    margin-top: 20px; // Añade espacio entre el mapa y el bloque de jefes
-    background-color: nth($colores, 6); // Fondo azul (reemplazado #007bff)
-    color: nth($colores, 2); // Texto blanco (reemplazado con el valor de la lista)
-    padding: 20px;
-    border-radius: 8px; // Bordes redondeados
-    text-align: center; // Texto centrado
-}
-.TextoContacto img {
-    margin-top: 20px; // Espaciado entre el párrafo y la imagen
-    width: 100%; // La imagen ocupa todo el ancho disponible dentro del contenedor
-    border-radius: 12px; // Bordes redondeados para que se vea bien con el resto del diseño
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade sombra a la imagen para que se vea elevada
-}*/
+   .image-box {
+     width: 100%; // Ocupan el 100% del ancho disponible
+     max-width: 300px;
+   }
+ }
+*/
 .contactosMain {
   gap: 40px;
-  margin: 40px auto;
   width: 90%;
   flex-wrap: wrap;
 }
 
 .left-side, .TextoContacto {
-  background-color: rgba(255, 208, 0, 0.856);
+  background-color: #003566;
+  color: #faf3e0;
   padding: 20px;
+  margin: 5px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 48%;
@@ -262,37 +279,43 @@ header {
 
 .jefes {
   margin-top: 20px;
-  background-color: #666;
-  color: white;
+  background-color: #ffc300;
+  color: #000814;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
 }
 
 .TextoContacto img {
-  margin-top: 20px;
+  margin-top: auto;
+  gap: 40px;
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* // Media queries para pantallas pequeñas
 @media only screen and (max-width: 768px) {
-  .contactosMain {
-    flex-direction: column;
-    align-items: center;
-  }
-  .left-side, .TextoContacto {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .TextoContacto img {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .mapa iframe {
-    height: 300px;
-  }
+    .contactosMain {
+        flex-direction: column; // Cambiar el layout a columna en pantallas pequeñas
+        align-items: center; // Alinear los elementos al centro
+    }
+
+    .left-side, .TextoContacto {
+        width: 100%; // Hacer que ocupen el 100% del ancho
+        margin-bottom: 20px; // Añadir margen entre los elementos
+    }
+
+    .TextoContacto img {
+        width: 100%; // Asegurarse de que la imagen ocupe todo el ancho
+        margin-top: 10px; // Reducir el margen superior
+    }
+
+    .mapa iframe {
+        height: 300px; // Ajustar la altura del mapa en pantallas más pequeñas
+    }
 }
+ */
 .mainHistory {
   display: flex;
   justify-content: center;
@@ -305,7 +328,7 @@ header {
   width: 100%;
   max-width: 600px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .div-texto1 {
@@ -313,9 +336,10 @@ header {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: #007bff;
-  color: #333;
+  background-color: #ffc300;
+  color: #000814;
   position: relative;
+  width: 32.22%;
 }
 
 .TextoMid {
@@ -323,11 +347,12 @@ header {
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  color: #faf3e0;
 }
 
 .div-texto2 {
-  background-color: #faf3e0;
-  color: #333;
+  background-color: #ffc300;
+  color: #000814;
   padding: 20px;
   margin: 20px auto;
   width: 100%;
@@ -342,26 +367,31 @@ header {
   margin: 10px 0;
 }
 
+/* // Media queries para ajustar en pantallas pequeñas
 @media only screen and (max-width: 768px) {
-  .mainHistory img {
-    max-width: 100%;
-  }
-  .div-texto2 {
-    width: 90%;
-    padding: 15px;
-    font-size: 0.9rem;
-  }
+    .mainHistory img {
+        max-width: 100%; // Imagen ocupa el 100% en pantallas pequeñas
+    }
+
+    .div-texto2 {
+        width: 90%; // Reduce el ancho del texto para que no sea tan amplio
+        padding: 15px; // Reducimos el padding también
+        font-size: 0.9rem; // Texto un poco más pequeño
+    }
 }
+
 @media only screen and (max-width: 768px) {
-  .div-texto2 {
-    width: 100%;
-    padding: 10px;
-    font-size: 0.85rem;
-  }
-  .mainHistory img {
-    max-width: 100%;
-  }
+    .div-texto2 {
+        width: 100%; // Ocupa el 100% en móviles
+        padding: 10px; // Menos padding en móviles
+        font-size: 0.85rem; // Tamaño de fuente más pequeño
+    }
+
+    .mainHistory img {
+        max-width: 100%; // La imagen se ajusta al 100% del ancho de la pantalla
+    }
 }
+ */
 .EtiquetaImg {
   width: 100%;
   margin-top: 0px; /* Espacio entre la imagen y los textos */
@@ -417,7 +447,7 @@ header {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px 10px 0 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -425,6 +455,10 @@ header {
   margin-top: 10px;
   font-size: 16px;
   color: #333; /* Color del texto (#333) */
+}
+
+.h1color {
+  color: #faf3e0;
 }
 
 /* Contenedor para ambos lados */
@@ -443,7 +477,8 @@ header {
   align-items: center;
   width: 100%;
   max-width: 600px; /* Ajusta el ancho del formulario */
-  background-color: #f8f9fa; /* Fondo claro (#f8f9fa) */
+  background-color: #003566; /* Fondo claro (#f8f9fa) */
+  color: #faf3e0;
   padding: 20px;
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 124, 27, 0.1); /* Sombra */
@@ -467,29 +502,31 @@ button {
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
+  color: black !important;
 }
 
 button[type=submit] {
-  background-color: #007bff; /* Fondo azul (#007bff) */
+  background-color: #ffc300; /* Fondo azul (#007bff) */
   color: white; /* Color blanco */
   border: none;
   transition: background-color 0.3s ease;
 }
 
 button[type=submit]:hover {
-  background-color: #0056b3; /* Fondo azul más oscuro (#0056b3) */
+  background-color: #ffd60a !important; /* Fondo azul más oscuro (#0056b3) */
+  border: 2px solid #ffc300; /* Borde gris oscuro (#6c757d) */
 }
 
 button[type=reset] {
-  background-color: transparent;
-  border: 2px solid #6c757d; /* Borde gris oscuro (#6c757d) */
-  color: #6c757d; /* Color gris oscuro (#6c757d) */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #ffc300; /* Fondo azul (#007bff) */
+  color: white; /* Color blanco */
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
 button[type=reset]:hover {
-  background-color: #6c757d; /* Fondo gris oscuro (#6c757d) */
-  color: white; /* Color blanco */
+  background-color: #ffd60a !important; /* Fondo azul más oscuro (#0056b3) */
+  border: 2px solid #ffc300; /* Borde gris oscuro (#6c757d) */
 }
 
 /* Lado derecho */
@@ -500,11 +537,16 @@ button[type=reset]:hover {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: #f8f9fa; /* Fondo claro (#f8f9fa) */
-  padding: 20px;
+  background-color: #003566; /* Fondo claro (#f8f9fa) */
+  color: #000814;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   gap: 20px; /* Espacio entre los bloques */
+}
+
+.colorh3 {
+  color: #faf3e0;
 }
 
 /* Estilo para cada bloque dentro de sideRight */
@@ -513,7 +555,7 @@ button[type=reset]:hover {
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
-  background-color: red; /* Fondo rojo */
+  background-color: #ffc300; /* Fondo rojo */
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -534,7 +576,6 @@ button[type=reset]:hover {
 }
 
 @media only screen and (max-width: 768px) {
-  /* Cambiar la disposición de los contenedores en pantallas pequeñas */
   .container-sides {
     flex-direction: column;
     gap: 20px;

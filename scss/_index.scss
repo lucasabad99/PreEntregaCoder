@@ -25,10 +25,10 @@
     margin-bottom: 0;
 
     p {
-        color: nth($colores, 2); // Color blanco
+        color: nth($coloresPaleta, 1); // Color blanco
         margin: 0;
         font-size: 24px;
-        background-color: nth($colores, 1); // Color primario (azul oscuro)
+        background-color: nth($coloresPaleta, 4); // Color primario (azul oscuro)
     }
 }
 
@@ -57,7 +57,7 @@
   
 
 .navbar {
-  background-color: nth($colores, 1) !important; // Color primario (azul oscuro)
+  background-color: nth($coloresPaleta, 1) !important; // Color primario (azul oscuro)
 
   .navbar-brand {
       color: nth($colores, 2); // Color secundario (blanco)
@@ -78,38 +78,70 @@
   }
 
   .dropdown-menu {
-      background-color: nth($colores, 11); // Fondo rojo
+      background-color: nth($coloresPaleta,2); // Fondo rojo
 
       .dropdown-item {
           color: nth($colores, 2); // Color negro
-
+          display: inline-block;
+          transition: transform 0.3s ease;
           &:hover {
-              background-color: lighten(nth($colores, 2), 10%); // Efecto hover
-          }
+          transform: scale(1.1);
+        } 
       }
   }
 
   .nav-item {
       &:nth-child(1) .nav-link {
-          color: nth($colores, 2); // Color personalizado para "Nuestra historia" (#ff6347)
+          color: nth($colores, 13); // Color personalizado para "Nuestra historia" (#ff6347)
+          
+            display: inline-block;
+            transition: transform 0.3s ease;
+          
+          &:hover {
+            transform: scale(1.1);
+          }
+          
       }
 
       &:nth-child(2) .nav-link {
-          color: nth($colores, 2); // Color personalizado para "Contactos" (#4682b4)
+          color: nth($colores, 13); // Color personalizado para "Contactos" (#4682b4)
+          display: inline-block;
+          transition: transform 0.3s ease;
+          &:hover {
+          transform: scale(1.1);
+        } 
       }
 
       &:nth-child(3) .nav-link {
-          color: nth($colores, 2); // Color personalizado para "Productos" (#32cd32)
+          color: nth($colores, 13); // Color personalizado para "Productos" (#32cd32)
+          display: inline-block;
+          transition: transform 0.3s ease;
+          &:hover {
+          transform: scale(1.1);
+        } 
       }
 
       &:nth-child(4) .nav-link {
-          color: nth($colores, 2) !important;  // Color personalizado para "Trabaje con nosotros" (#ff4500)
+          color: nth($colores, 13) !important;  // Color personalizado para "Trabaje con nosotros" (#ff4500)
+          display: inline-block;
+          transition: transform 0.3s ease;
+          &:hover {
+          transform: scale(1.1);
+        } 
       }
+      &:nth-child(5) .nav-link {
+        color: nth($colores, 13) !important;  // Color personalizado para "Trabaje con nosotros" (#ff4500)
+        display: inline-block;
+        transition: transform 0.3s ease;
+        &:hover {
+        transform: scale(1.1);
+      } 
+    }
   }
 
   .btn-outline-success {
-      background-color: nth($colores, 11) !important; // Color rojo
-      color: nth($colores, 2); // Color blanco
+      background-color: nth($coloresPaleta, 3) !important; // Color rojo
+      color: nth($colores, 13) !important; // Color blanco
 
       &:hover {
           background-color: lighten(nth($colores, 2), 90%); // Color más claro en hover
@@ -143,18 +175,18 @@
       h3 {
         margin: 0;
         font-size: 1.2rem;
-        color: nth($colores, 5); // Color gris oscuro (#333)
+        color: nth($colores, 13); // Color gris oscuro (#333)
       }
       p {
         margin-top: 1px;
         font-size: 1rem;
-        color: nth($colores, 6); // Color gris claro (#666)
+        color: nth($colores, 13); // Color gris claro (#666)
       }
     }
   }
   
   // Media queries para pantallas pequeñas
-  @media only screen and (max-width: 768px) {
+ /*  @media only screen and (max-width: 768px) {
     .image-gallery {
       flex-direction: column; // Cambiar a columna en pantallas pequeñas
       align-items: center;
@@ -165,4 +197,4 @@
       max-width: 300px;
     }
   }
-
+ */

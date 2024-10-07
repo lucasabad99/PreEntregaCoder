@@ -51,7 +51,7 @@
 .producto-img {
   @include size(100%, 250px);
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px 10px 0 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -59,4 +59,8 @@
   margin-top: 10px;
   font-size: 16px;
   color: nth($colores, 5); /* Color del texto (#333) */
+}
+
+.h1color{
+  color: nth($colores, 13);
 }

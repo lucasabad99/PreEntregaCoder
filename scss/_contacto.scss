@@ -1,48 +1,17 @@
 // CONTACTOS
-/*.contactosMain {
-    @extend%flexcenterstar;
-    gap: 40px; // Añade espacio entre los dos contenedores
-    margin: 40px auto; // Añade un margen superior e inferior, y centra la sección en el medio de la página
-    width: 90%; // Controla el ancho general del contenedor principal
-}
-.left-side, .TextoContacto {
-    background-color: nth($colores, 5); // Color de fondo claro para el contenedor (reemplazado #f8f9fa)
-    padding: 20px; // Espaciado interno dentro del contenedor
-    border-radius: 12px; // Bordes redondeados para suavizar las esquinas
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade una sombra sutil para dar un efecto elevado
-    width: 50%; // Ambos contenedores ocupan el 50% del ancho cada uno
-}
-.mapa iframe {
-    @include sizes(100%, 350px, 12px, 0); 
-   }
-
-.jefes {
-    margin-top: 20px; // Añade espacio entre el mapa y el bloque de jefes
-    background-color: nth($colores, 6); // Fondo azul (reemplazado #007bff)
-    color: nth($colores, 2); // Texto blanco (reemplazado con el valor de la lista)
-    padding: 20px;
-    border-radius: 8px; // Bordes redondeados
-    text-align: center; // Texto centrado
-}
-.TextoContacto img {
-    margin-top: 20px; // Espaciado entre el párrafo y la imagen
-    width: 100%; // La imagen ocupa todo el ancho disponible dentro del contenedor
-    border-radius: 12px; // Bordes redondeados para que se vea bien con el resto del diseño
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade sombra a la imagen para que se vea elevada
-}*/
-
-// CONTACTOS
 .contactosMain {
     @extend %flexcenterstar;
     gap: 40px;
-    margin: 40px auto;
+    //margin: 40px auto;
     width: 90%; 
     flex-wrap: wrap; // Permitir que los elementos se envuelvan en pantallas pequeñas
 }
 
 .left-side, .TextoContacto {
-    background-color: nth($colores, 14); 
+    background-color: nth($coloresPaleta,3); 
+    color: nth($colores, 13);
     padding: 20px;
+    margin: 5px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 48%; // Mantén un 48% para espacio entre columnas en pantallas grandes
@@ -54,21 +23,22 @@
 
 .jefes {
     margin-top: 20px;
-    background-color: nth($colores, 6);
-    color: nth($colores, 2);
+    background-color: nth($coloresPaleta, 4);
+    color: nth($coloresPaleta,1);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
 }
 
 .TextoContacto img {
-    margin-top: 20px;
+    margin-top: auto;
+    gap: 40px;
     width: 100%; 
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-// Media queries para pantallas pequeñas
+/* // Media queries para pantallas pequeñas
 @media only screen and (max-width: 768px) {
     .contactosMain {
         flex-direction: column; // Cambiar el layout a columna en pantallas pequeñas
@@ -89,5 +59,5 @@
         height: 300px; // Ajustar la altura del mapa en pantallas más pequeñas
     }
 }
-
+ */
 

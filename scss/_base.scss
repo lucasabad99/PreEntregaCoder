@@ -2,17 +2,21 @@
 // Estilos generales para el header
 header {
   // Uso de listas para colores
-  background-color: nth($colores, 1);
-  color: nth($colores, 2); // Usamos el color blanco para el texto
+  background-color: nth($coloresPaleta, 1);
+  color: nth($colores, 13); // Usamos el color blanco para el texto
   font-family: nth($fuentes, 1); // Uso de la lista de fuentes
   padding: 10px 20px;
   position: relative; // Para manejar la posición del menú correctamente
 }
 
+main{
+  background-color: nth($coloresPaleta, 2 );
+}
+
 /* Global styles */
 .footer-global {
-  background-color: nth($colores, 3); /* Color de fondo */
-  color: nth($colores, 4); /* Color del texto (blanco) */
+  background-color: nth($coloresPaleta, 3); /* Color de fondo */
+  color: nth($colores, 13); /* Color del texto (blanco) */
   font-family: nth($fuentes, 1); // Uso de la lista de fuentes
   padding: 20px 0; /* Espacio dentro del footer */
   text-align: center; /* Centra el contenido del footer */
@@ -44,3 +48,16 @@ header {
     }
   }
 }
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__slideInDown {
+  --animate-duration: 0.5s;
+}
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+
+
