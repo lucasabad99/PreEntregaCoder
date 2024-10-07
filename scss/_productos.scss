@@ -1,30 +1,30 @@
 // Productos BOCA
 .EtiquetaImg {
-    @extend%flexcolumncenter;
-    width: 100%;
-    margin-top: 0px; /* Espacio entre la imagen y los textos */
-    gap: 5px; /* Espacio entre las líneas de texto */
-    background-color: nth($colores, 14); /* Color de fondo para destacar la etiqueta (amarillo Boca) */
-    
-    p {
+  @extend %flexcolumncenter;
+  width: 100%;
+  margin-top: 0px; // Espacio entre la imagen y los textos
+  gap: 5px; // Espacio entre las líneas de texto
+  background-color: nth($colores, 14);
+  
+  p {
       margin: 0;
-      font-size: 14px; /* Tamaño de fuente uniforme */
-      color: nth($colores, 5); /* Color del texto (#333) */
-    }
-  
-    p:first-of-type {
-      font-size: 18px; /* Tamaño más grande para el precio */
-      font-weight: bold; /* Resalta el precio */
-      color: nth($colores, 15); /* Color diferente para el precio (azul Boca) */
-    }
-  
-    p:nth-of-type(2) {
-      font-weight: 600; /* Resalta el nombre del producto */
-    }
-  
-    p:nth-of-type(3) {
-      font-style: italic; /* Opcional: estilo diferente para la categoría */
-    }
+      font-size: 14px; // Tamaño de fuente uniforme
+      color: nth($colores, 5);
+  }
+
+  p:first-of-type {
+      font-size: 18px; // Tamaño más grande para el precio
+      font-weight: bold; // Resalta el precio
+      color: nth($colores, 15);
+  }
+
+  p:nth-of-type(2) {
+      font-weight: 600; // Resalta el nombre del producto
+  }
+
+  p:nth-of-type(3) {
+      font-style: italic;
+  }
 }
 
 // PRODUCTOS
@@ -34,15 +34,15 @@
 }
 
 .productos-section {
-  @include flexgapjustify(wrap,20px,center);
+  @include flexgapjustify(wrap, 20px, center);
 }
 
 .img-productos {
-  @include flexgapjustify(wrap,20px,center);
+  @include flexgapjustify(wrap, 20px, center);
 }
 
 .producto {
-  @include flexboxess(column,center);
+  @include flexboxess(column, center);
   width: calc(25% - 20px);
   max-width: 250px;
   text-align: center;
@@ -58,9 +58,9 @@
 .producto p {
   margin-top: 10px;
   font-size: 16px;
-  color: nth($colores, 5); /* Color del texto (#333) */
+  color: nth($colores, 5);
 }
 
-.h1color{
+.h1color {
   color: nth($colores, 13);
 }

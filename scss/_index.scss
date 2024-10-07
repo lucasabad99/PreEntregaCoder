@@ -1,200 +1,69 @@
 // CAROUSEL INDEX
 .banner {
-    @extend%flexcolumncenter;
-    margin-bottom: 0;
-    padding: 0;
+  @extend %flexcolumncenter;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .carousel {
-    @include size(100%,auto);
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+  @include size(100%, auto);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 
-    .carousel-inner img {
-      @include size(100%,auto);
-        object-fit: cover;
-        max-width: 100%;
-    }
+  .carousel-inner img {
+      @include size(100%, auto);
+      object-fit: cover;
+      max-width: 100%;
+  }
 }
 
 .subtitle-container {
-    text-align: center;
-    width: 100%;
-    margin-top: -5px; // Pegar el subtítulo al carrusel
-    margin-bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin-top: -5px; // Pego el subtítulo al carrusel
+  margin-bottom: 0;
 
-    p {
-        color: nth($coloresPaleta, 1); // Color blanco
-        margin: 0;
-        font-size: 24px;
-        background-color: nth($coloresPaleta, 4); // Color primario (azul oscuro)
-    }
-}
-
-// NAV INDEX
-
-.navAlineado {
-  @extend %flexrowcenter;
-}
-
-.navbar-toggler {
-    border-color: purple;  // Cambia el color del borde a blanco
-    border-width: 2px;    // Ajusta el grosor del borde
-    
-    &:focus, &:active {
-      outline: none;  // Elimina el borde de foco negro
-      box-shadow: none; // Elimina cualquier sombra adicional
-    }
-  }
-  
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    // Cambia el color de las líneas a blanco
-  }
-  
-  
-  
-
-.navbar {
-  background-color: nth($coloresPaleta, 1) !important; // Color primario (azul oscuro)
-
-  .navbar-brand {
-      color: nth($colores, 2); // Color secundario (blanco)
-      font-weight: bold;
-
-      &:hover {
-          color: lighten(nth($colores, 2), 10%); // Color más claro al pasar el mouse
-      }
-  }
-
-  .nav-link {
-      color: nth($colores, 2); // Color gris oscuro (#333)
-      font-weight: 500;
-
-      &:hover {
-          color: darken(nth($colores, 2), 10%); // Color más oscuro al pasar el mouse
-      }
-  }
-
-  .dropdown-menu {
-      background-color: nth($coloresPaleta,2); // Fondo rojo
-
-      .dropdown-item {
-          color: nth($colores, 2); // Color negro
-          display: inline-block;
-          transition: transform 0.3s ease;
-          &:hover {
-          transform: scale(1.1);
-        } 
-      }
-  }
-
-  .nav-item {
-      &:nth-child(1) .nav-link {
-          color: nth($colores, 13); // Color personalizado para "Nuestra historia" (#ff6347)
-          
-            display: inline-block;
-            transition: transform 0.3s ease;
-          
-          &:hover {
-            transform: scale(1.1);
-          }
-          
-      }
-
-      &:nth-child(2) .nav-link {
-          color: nth($colores, 13); // Color personalizado para "Contactos" (#4682b4)
-          display: inline-block;
-          transition: transform 0.3s ease;
-          &:hover {
-          transform: scale(1.1);
-        } 
-      }
-
-      &:nth-child(3) .nav-link {
-          color: nth($colores, 13); // Color personalizado para "Productos" (#32cd32)
-          display: inline-block;
-          transition: transform 0.3s ease;
-          &:hover {
-          transform: scale(1.1);
-        } 
-      }
-
-      &:nth-child(4) .nav-link {
-          color: nth($colores, 13) !important;  // Color personalizado para "Trabaje con nosotros" (#ff4500)
-          display: inline-block;
-          transition: transform 0.3s ease;
-          &:hover {
-          transform: scale(1.1);
-        } 
-      }
-      &:nth-child(5) .nav-link {
-        color: nth($colores, 13) !important;  // Color personalizado para "Trabaje con nosotros" (#ff4500)
-        display: inline-block;
-        transition: transform 0.3s ease;
-        &:hover {
-        transform: scale(1.1);
-      } 
-    }
-  }
-
-  .btn-outline-success {
-      background-color: nth($coloresPaleta, 3) !important; // Color rojo
-      color: nth($colores, 13) !important; // Color blanco
-
-      &:hover {
-          background-color: lighten(nth($colores, 2), 90%); // Color más claro en hover
-      }
+  p {
+      color: nth($coloresPaleta, 1);
+      margin: 0;
+      font-size: 24px;
+      background-color: nth($coloresPaleta, 4);
   }
 }
 
 .image-gallery {
-    display: flex;
-    flex-wrap: wrap; // Permitir que las imágenes se ajusten en filas y evitar que desaparezcan
-    justify-content: center;
-    gap: 20px;
-    padding: 10px;
-  }
-  
-  .image-box {
-    width: calc(33.33% - 20px); // Ajustar para que se distribuyan 3 por fila en pantallas grandes
-    max-width: 300px; // Limitar el ancho máximo
-    text-align: center; // Centrar el texto debajo de la imagen
-  
-    .gallery-image {
+  @include flexjustify(wrap, center);
+  gap: 20px;
+  padding: 10px;
+}
+
+.image-box {
+  width: calc(33.33% - 20px);
+  max-width: 300px;
+  text-align: center;
+
+  .gallery-image {
       width: 100%;
-      height: 350px; // Asegurar que todas las imágenes tengan la misma altura
-      object-fit: cover; // Mantener proporciones sin deformar la imagen
+      height: 350px; // Asegura que todas las imágenes tengan la misma altura
+      object-fit: cover; // Mantiene proporciones sin deformar la imagen
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  
-    .image-caption {
-      margin-top: 5px; // Separar un poco el texto de la imagen
+  }
+
+  .image-caption {
+      margin-top: 5px; // Separa un poco el texto de la imagen
+
       h3 {
-        margin: 0;
-        font-size: 1.2rem;
-        color: nth($colores, 13); // Color gris oscuro (#333)
+          margin: 0;
+          font-size: 1.2rem;
+          color: nth($colores, 13);
       }
+
       p {
-        margin-top: 1px;
-        font-size: 1rem;
-        color: nth($colores, 13); // Color gris claro (#666)
+          margin-top: 1px;
+          font-size: 1rem;
+          color: nth($colores, 13);
       }
-    }
   }
-  
-  // Media queries para pantallas pequeñas
- /*  @media only screen and (max-width: 768px) {
-    .image-gallery {
-      flex-direction: column; // Cambiar a columna en pantallas pequeñas
-      align-items: center;
-    }
-    
-    .image-box {
-      width: 100%; // Ocupan el 100% del ancho disponible
-      max-width: 300px;
-    }
-  }
- */
+}

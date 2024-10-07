@@ -1,31 +1,32 @@
 @media only screen and (max-width: 768px) {
 
-  // Ajustes generales para el header
+  // Estilos generales para el header
   header {
     padding: 5px 10px;
+
     h1 {
       font-size: 1.5rem;
     }
+
     nav .navbar-brand {
       font-size: 1rem;
     }
   }
 
-  // Ajustes del carrusel
+  // Estilos del carrusel
   .carousel img {
     height: auto;
     max-height: 200px; // Ajusta la altura de las imágenes del carrusel
   }
 
-  // Ajustes del banner
+  // Estilos del banner
   .subtitle-container p {
     font-size: 1.1rem;
   }
 
-  // Ajustes de la galería de imágenes
+  // Estilos de la galería de imágenes
   .image-gallery {
-    flex-direction: column;
-    align-items: center;
+    @include directionAlign(column, center);
   }
 
   .image-box {
@@ -42,12 +43,9 @@
     border-radius: 10px;
   }
 
-  // Ajustes para productos
+  // Estilos para productos
   .productos-section .img-productos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    @include fgjust(column, center, 10px);
   }
 
   .producto {
@@ -59,9 +57,10 @@
     width: 100%;
   }
 
-  // Ajustes para formularios
+  // Estilo para formularios
   .container-sides {
     flex-direction: column;
+
     .sideLeft, .sideRight {
       width: 100%;
       max-width: none;
@@ -71,12 +70,15 @@
   // Footer
   .footer-content {
     flex-direction: column;
+
     div {
       text-align: center;
       margin-bottom: 10px;
     }
+
     .social-icons {
       justify-content: center;
+
       a {
         margin: 0 5px;
       }
@@ -85,13 +87,12 @@
 
   // Página Contacto
   .contactosMain {
-    flex-direction: column;
-    align-items: center;
+    @include flexcolumcenter(column, center);
   }
 
   .left-side, .TextoContacto {
     width: 100%;
-    margin-bottom: 20px;
+    margin: 10px 31px;
   }
 
   .TextoContacto img {
@@ -106,6 +107,12 @@
   // Página Nuestra Historia
   .mainHistory img {
     max-width: 100%;
+  }
+
+  .div-texto1 {
+    width: 90%;
+    padding: 15px;
+    font-size: 0.9rem;
   }
 
   .div-texto2 {

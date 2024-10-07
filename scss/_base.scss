@@ -1,39 +1,166 @@
 /* INDEX */
-// Estilos generales para el header
+// Estilos generales 
 header {
   // Uso de listas para colores
   background-color: nth($coloresPaleta, 1);
-  color: nth($colores, 13); // Usamos el color blanco para el texto
+  color: nth($colores, 13); // Usamos el color crema para el texto
   font-family: nth($fuentes, 1); // Uso de la lista de fuentes
   padding: 10px 20px;
-  position: relative; // Para manejar la posición del menú correctamente
+  position: relative; // Manejo la posición del menú correctamente
 }
 
-main{
-  background-color: nth($coloresPaleta, 2 );
+// NAV INDEX
+
+.navAlineado {
+  @extend %flexrowcenter;
 }
 
-/* Global styles */
+.navbar-toggler {
+  border-color: nth($coloresPaleta, 5);
+  border-width: 2px;
+
+  &:focus, &:active {
+    outline: none; // Elimina el borde de foco negro
+    box-shadow: none; // Elimina cualquier sombra adicional
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar {
+  background-color: nth($coloresPaleta, 1) !important;
+
+  .navbar-brand {
+    color: nth($colores, 2);
+    font-weight: bold;
+
+    &:hover {
+      color: lighten(nth($colores, 2), 10%);
+    }
+  }
+
+  .nav-link {
+    color: nth($colores, 1);
+    font-weight: 500;
+
+    &:hover {
+      color: darken(nth($colores, 1), 10%);
+    }
+  }
+
+  .dropdown-menu {
+    background-color: nth($coloresPaleta, 1);
+
+    .dropdown-item {
+      color: nth($colores, 13);
+      display: inline-block;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .nav-item {
+    &:nth-child(1) .nav-link {
+      color: nth($colores, 13);
+      display: inline-block;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &:nth-child(2) .nav-link {
+      color: nth($colores, 13);
+      display: inline-block;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &:nth-child(3) .nav-link {
+      color: nth($colores, 13);
+      display: inline-block;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &:nth-child(4) .nav-link {
+      color: nth($colores, 13) !important;
+      display: inline-block;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &:nth-child(5) .nav-link {
+      color: nth($colores, 13) !important;
+      display: inline-block;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .btn-outline-success {
+    background-color: nth($coloresPaleta, 3) !important;
+    color: nth($colores, 13) !important;
+
+    &:hover {
+      background-color: lighten(nth($colores, 2), 90%);
+    }
+  }
+}
+
+// Animacion titulo Moda Ambar
+.animate__animated.animate__slideInDown {
+  --animate-duration: 0.5s;
+}
+
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+main {
+  background-color: nth($coloresPaleta, 2);
+}
+
 .footer-global {
-  background-color: nth($coloresPaleta, 3); /* Color de fondo */
-  color: nth($colores, 13); /* Color del texto (blanco) */
+  background-color: nth($coloresPaleta, 3); // Color de fondo
+  color: nth($colores, 13); // Color del texto
   font-family: nth($fuentes, 1); // Uso de la lista de fuentes
-  padding: 20px 0; /* Espacio dentro del footer */
-  text-align: center; /* Centra el contenido del footer */
+  padding: 20px 0; // Espacio dentro del footer
+  text-align: center; // Centra el contenido del footer
 
   .footer-content {
-    @include flexbox(row, space-around, center, wrap, 20px); /* Usamos el mixin de flexbox */
+    @include flexbox(row, space-around, center, wrap, 20px); // Uso el mixin de flexbox
+
     div {
       flex: 1;
       max-width: 200px;
     }
 
     .social-icons {
-      @include flexbox(row, center, stretch, nowrap, 5px); /* Usamos el mixin de flexbox */
+      @include flexbox(row, center, stretch, nowrap, 5px); // Uso el mixin de flexbox
 
       a, i {
         font-size: 24px;
-        color: #333;
+        color: nth($colores, 13);
         transition: color 0.3s;
       }
 
@@ -48,16 +175,3 @@ main{
     }
   }
 }
-
-/* This only changes this particular animation duration */
-.animate__animated.animate__slideInDown {
-  --animate-duration: 0.5s;
-}
-/* This changes all the animations globally */
-:root {
-  --animate-duration: 800ms;
-  --animate-delay: 0.9s;
-}
-
-
-

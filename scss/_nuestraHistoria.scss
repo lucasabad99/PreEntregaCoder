@@ -1,72 +1,44 @@
-// Estilo para el contenedor principal de la página "Nuestra Historia"
+// Estilo para "Nuestra Historia"
 .mainHistory {
     @include flexcenterrowes(center, column, center);
-    padding: 20px; // Agregamos algo de espacio alrededor
+    padding: 20px;
 }
 
 // Ajuste del tamaño de la imagen
 .mainHistory img {
-    width: 100%; // La imagen ocupará todo el ancho del contenedor
-    max-width: 600px; // Pero no será más ancha que 600px
-    height: auto; // Mantendrá la proporción original para evitar que se corte
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     border-radius: 10px 10px 0 0;
 }
 
-// Estilo para el primer bloque de texto (texto1)
 .div-texto1 {
     @include flexcenterrowes(center, column, center);
-    background-color: nth($coloresPaleta, 4);   // Fondo azul (#007bff)
-    color: nth($coloresPaleta, 1);               // Texto negro (#333)
-    position: relative;          // Define la posición relativa, útil para posicionar elementos internos.
+    background-color: nth($coloresPaleta, 4);
+    color: nth($coloresPaleta, 1);
+    position: relative;
     width: 32.22%;
 }
 
 .TextoMid {
     @include flexcenterrowes(center, row, center);
     color: nth($colores, 13);
-   }
-// Ajuste de la caja de texto largo (para que no se extienda mucho en pantallas pequeñas)
+}
+
 .div-texto2 {
     background-color: nth($coloresPaleta, 4);
     color: nth($coloresPaleta, 1);
-    padding: 20px; // Disminuimos el padding en pantallas más pequeñas
+    padding: 20px;
     margin: 20px auto;
-    width: 100%; // Ocupa todo el ancho en pantallas pequeñas
-    max-width: 600px; // Pero no más de 600px
+    width: 100%;
+    max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 1rem; // Ajustamos un poco el tamaño de la fuente en pantallas pequeñas
+    font-size: 1rem;
     line-height: 1.5;
-    text-align: justify; // Justificamos el texto para mejorar la legibilidad
+    text-align: justify;
 
-    // Para los encabezados y párrafos dentro del texto
     h1, p {
         margin: 10px 0;
     }
 }
-
-/* // Media queries para ajustar en pantallas pequeñas
-@media only screen and (max-width: 768px) {
-    .mainHistory img {
-        max-width: 100%; // Imagen ocupa el 100% en pantallas pequeñas
-    }
-
-    .div-texto2 {
-        width: 90%; // Reduce el ancho del texto para que no sea tan amplio
-        padding: 15px; // Reducimos el padding también
-        font-size: 0.9rem; // Texto un poco más pequeño
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .div-texto2 {
-        width: 100%; // Ocupa el 100% en móviles
-        padding: 10px; // Menos padding en móviles
-        font-size: 0.85rem; // Tamaño de fuente más pequeño
-    }
-
-    .mainHistory img {
-        max-width: 100%; // La imagen se ajusta al 100% del ancho de la pantalla
-    }
-}
- */
